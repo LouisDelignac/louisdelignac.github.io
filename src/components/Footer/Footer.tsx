@@ -1,4 +1,4 @@
-import { Container, Image, Text } from '@mantine/core';
+import { Container, Text } from '@mantine/core';
 import classes from './Footer.module.css';
 
 function Footer() {

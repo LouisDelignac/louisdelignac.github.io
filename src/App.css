@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Palette de couleurs */
 :root {
     --color-dark: #1e2a38;
@@ -7,6 +5,7 @@
     --color-white: #ffffff;
     --color-primary: #2a9d8f;
 }
+/* background-color: #23867b; */
 /* TODO: #222831 #393E46 #948979 #DFD0B8 */
 
 /* Reset et typographie */
@@ -37,42 +36,8 @@ body {
   color: var(--color-primary);
 }
 
-/* Navigation */
-.nav {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  transition: transform 0.2s, background-color 0.2s;
-}
-.btn:hover,
-.btn:focus {
-  transform: translateY(-3px);
-  background-color: #23867b;
-}
-.btn:active {
-  transform: translateY(0);
-}
-
 /* Responsive */
 @media (max-width: 600px) {
-  #hero-title {
-    font-size: 2.5rem;
-  }
   .nav-list {
     flex-direction: column;
   }
@@ -84,22 +49,9 @@ body {
   font-size: 2rem;
   margin: 1rem 0;
 }
-/* Projects */
-.projects-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-  gap: 2rem;
-  padding: 2rem 4rem;
+#projects {
+  background-color: #f8f9fa;
 }
-/* About me */
 #about-me {
-  background-color: rgba(30, 42, 56, 0.6);
-  padding: 2rem;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  text-align: center;
+  background-color: #ffffff;
 }
