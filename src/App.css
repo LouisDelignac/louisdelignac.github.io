@@ -1,10 +1,10 @@
 /* Palette de couleurs */
-/* :root {
+:root {
     --color-dark: #1e2a38;
     --color-light: #f5f7fa;
     --color-white: #ffffff;
     --color-primary: #2a9d8f;
-} */
+}
 /* background-color: #23867b; */
 /* TODO: #222831 #393E46 #948979 #DFD0B8 */
 
@@ -28,8 +28,8 @@
 
 /* Main */
 #projects {
-  background-color: #f5f7fa;
+  background-color: var(--mantine-color-gray-0);
 }
 #about-me {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }

@@ -39,35 +39,35 @@ function App() {
           <NavButton href="./CV_Louis_Delignac.pdf" label="Resume"   />
         </Group>
 
-        <Dots style={{ left: 0, top: 0 }} />
-        <Dots style={{ left: 60, top: 0 }} />
-        <Dots style={{ left: 0, top: 140 }} />
-        <Dots style={{ right: 0, top: 60 }} />
+        <Dots style={{ left: 0,  top: 0   }} />
+        <Dots style={{ left: 60, top: 0   }} />
+        <Dots style={{ left: 0,  top: 140 }} />
+        <Dots style={{ right: 0, top: 60  }} />
       </Box>
 
       <Box component="main">
         <Box component="section" id="projects" pb="xl">
-          <Title order={2} fz="2rem" ta="center" pt="md" pb="md" m="md">
+          <Title order={2} fz="2rem" ta="center" pt="xl" pb="md" m="md">
             My Projects
           </Title>
-          <Container size="xl">
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mx={50}>
+          <Container size="lg">
+            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" pb="xl">
               {ProjectCards}
             </SimpleGrid>        
           </Container>
         </Box>
 
         <Box component="section" id="about-me" pb="xl">
-          <Title order={2} fz="2rem" ta="center" pt="sm" m="md">
+          <Title order={2} fz="2rem" ta="center" pt="xl" mb="md">
             About me
           </Title>
-          <Container size="xl">
-            <Text>
+          <Container size="lg">
+            <Text ta="justify" mb="xl">
               {PAGE_TEXTS.presentation}
             </Text>
-            <SimpleGrid cols={{ base: 1, sm: 3 }}>
-              <CareerCard title="Internship"          image="/images/stms2.png" />
-              <CareerCard title="Academic background" image="/images/ub.png" />
+            <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl" pb="xl">
+              <CareerCard title="Internship"          image="/images/stms2.png"  />
+              <CareerCard title="Academic background" image="/images/ub.png"     />
               <CareerCard title="Associative"         image="/images/mayday.jpg" />
             </SimpleGrid>
           </Container>

@@ -12,29 +12,29 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description, link, image, tags }) => (
-  <Card withBorder radius="md" p="md" className={classes.card}>
+  <Card shadow="sm" radius="md" p="md" className={classes.card}>
       <Card.Section>
         <Image src={image} alt={title} height={180} />
       </Card.Section>
 
-      <Card.Section className={classes.section} mt="md">
+      <Card.Section className={classes.section} mt="md" mb="xl">
         <Text fz="lg" fw={500}>
           {title}
           <Badge size="sm" variant="light" ml="xs">
             {categorie}
           </Badge>
         </Text>
-        <Text fz="sm" mt="xs">
+        <Text fz="sm" mt="xs" c="dimmed">
           {description}
         </Text>
       </Card.Section>
 
       <Stack style={{ flexGrow: 1, justifyContent: "flex-end" }}>
         <Card.Section className={classes.section}>
-          <Text mt="md" className={classes.label} c="dimmed">
+          {/* <Text mt="md" className={classes.label} c="dimmed">
             Tags
-          </Text>
-          <Group gap={7} mt={5}>
+          </Text> */}
+          <Group gap="xs" mt={5}>
             {tags.map((tag) => (
               <Badge key={tag} variant="light" size="sm" className={classes.tag}>
                 {tag}
