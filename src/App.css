@@ -1,29 +1,12 @@
 /* Palette de couleurs */
-:root {
+/* :root {
     --color-dark: #1e2a38;
     --color-light: #f5f7fa;
     --color-white: #ffffff;
     --color-primary: #2a9d8f;
-}
+} */
 /* background-color: #23867b; */
 /* TODO: #222831 #393E46 #948979 #DFD0B8 */
-
-/* Reset et typographie */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--color-light);
-  color: var(--color-dark);
-}
-body {
-  line-height: 1.6;
-}
 
 /* Hero section */
 .social-icons a {
@@ -44,13 +27,8 @@ body {
 }
 
 /* Main */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin: 1rem 0;
-}
 #projects {
-  background-color: #f8f9fa;
+  background-color: #f5f7fa;
 }
 #about-me {
   background-color: #ffffff;

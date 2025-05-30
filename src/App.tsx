@@ -1,8 +1,9 @@
 import React from 'react';
-import { Title, Text, SimpleGrid, Group, Anchor, Box } from '@mantine/core';
+import { Anchor, Box, Container, Group, SimpleGrid, Title, Text } from '@mantine/core';
 import Dots from './components/Dots';
 import { socialLinks } from './data/socialLinks';
 import { projects } from './data/projects';
+import { PAGE_TEXTS } from "./data/texts";
 import ProjectCard from './components/ProjectCard';
 import Footer from './components/Footer';
 import CareerCard from './components/CareerCard';
@@ -15,7 +16,7 @@ function App() {
       <i className={icon} aria-hidden="true" />
     </Anchor>
   ));
-  const Cards = projects.map((proj) => (
+  const ProjectCards = projects.map((proj) => (
     <ProjectCard key={proj.title} {...proj} />
   ))
 
@@ -32,10 +33,10 @@ function App() {
           {socialIcons}
         </Group>
         
-        <Group className="nav-list" justify="center" mt="xl" pb="lg" gap="xs">
-          <NavButton href="#projects" label="Projects" />
-          <NavButton href="#about-me" label="About Me" />
-          <NavButton href="./CV_Louis_Delignac.pdf" label="Resume" />
+        <Group className="nav-list" justify="center" mt="xl" pb="lg" gap="xl">
+          <NavButton href="#projects"               label="Projects" />
+          <NavButton href="#about-me"               label="About Me" />
+          <NavButton href="./CV_Louis_Delignac.pdf" label="Resume"   />
         </Group>
 
         <Dots style={{ left: 0, top: 0 }} />
@@ -46,30 +47,30 @@ function App() {
 
       <Box component="main">
         <Box component="section" id="projects" pb="xl">
-          <Title order={2} className="section-title" ta="center" pt="md" pb="md">
+          <Title order={2} fz="2rem" ta="center" pt="md" pb="md" m="md">
             My Projects
           </Title>
-          <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mx={50}>
-            {Cards}
-          </SimpleGrid>        
+          <Container size="xl">
+            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mx={50}>
+              {ProjectCards}
+            </SimpleGrid>        
+          </Container>
         </Box>
 
         <Box component="section" id="about-me" pb="xl">
-          <Title order={2} className="section-title" ta="center" pt="sm">
+          <Title order={2} fz="2rem" ta="center" pt="sm" m="md">
             About me
           </Title>
-          <Box ml="xl" mr="xl">
+          <Container size="xl">
             <Text>
-              I am currently in the second year of a Master's in Data Science at the University of Bordeaux and am completing my final internship at STMS.
-              I am passionate about data science and innovation, and I am eager to contribute to projects that have a meaningful environmental and societal impact. 
-              I am particularly motivated by the opportunity to work on challenges at the intersection of artificial intelligence and industry.
+              {PAGE_TEXTS.presentation}
             </Text>
             <SimpleGrid cols={{ base: 1, sm: 3 }}>
               <CareerCard title="Internship"          image="/images/stms2.png" />
               <CareerCard title="Academic background" image="/images/ub.png" />
               <CareerCard title="Associative"         image="/images/mayday.jpg" />
             </SimpleGrid>
-          </Box>
+          </Container>
         </Box>
       </Box>
 

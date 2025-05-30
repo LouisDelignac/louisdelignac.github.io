@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Button, Card, Group, Image, Text } from '@mantine/core';
+import { Badge, Stack, Button, Card, Group, Image, Text } from '@mantine/core';
 import classes from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -18,50 +18,49 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
       </Card.Section>
 
       <Card.Section className={classes.section} mt="md">
-        <Group justify="apart">
-          <Text fz="lg" fw={500}>
-            {title}
-            <Badge size="sm" variant="light">
-              {categorie}
-            </Badge>
-          </Text>
-          
-        </Group>
+        <Text fz="lg" fw={500}>
+          {title}
+          <Badge size="sm" variant="light" ml="xs">
+            {categorie}
+          </Badge>
+        </Text>
         <Text fz="sm" mt="xs">
           {description}
         </Text>
       </Card.Section>
 
-      <Card.Section className={classes.section}>
-        <Text mt="md" className={classes.label} c="dimmed">
-          Tags
-        </Text>
-        <Group gap={7} mt={5}>
-          {tags.map((tag) => (
-            <Badge key={tag} variant="light" size="sm" className={classes.tag}>
-              {tag}
-            </Badge>
-          ))}
-        </Group>
-      </Card.Section>
+      <Stack style={{ flexGrow: 1, justifyContent: "flex-end" }}>
+        <Card.Section className={classes.section}>
+          <Text mt="md" className={classes.label} c="dimmed">
+            Tags
+          </Text>
+          <Group gap={7} mt={5}>
+            {tags.map((tag) => (
+              <Badge key={tag} variant="light" size="sm" className={classes.tag}>
+                {tag}
+              </Badge>
+            ))}
+          </Group>
+        </Card.Section>
 
-      <Group mt="xs">
-        <Button
-          component="a"
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          radius="md"
-          style={{ flex: 1 }}
-        >
-          Show details
-        </Button>
-        {/* <ActionIcon variant="default" radius="md" size={36}>
-          <IconHeart className={classes.like} stroke={1.5} />
-        </ActionIcon> */}
-      </Group>
+        <Group>
+          <Button
+            component="a"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            radius="md"
+            fullWidth
+            style={{ flex: 1 }}
+          >
+            Show details
+          </Button>
+          {/* <ActionIcon variant="default" radius="md" size={36}>
+            <IconHeart className={classes.like} stroke={1.5} />
+          </ActionIcon> */}
+        </Group>
+      </Stack>
     </Card>
   );
-
 
 export default ProjectCard;

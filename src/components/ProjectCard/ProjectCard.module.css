@@ -1,36 +1,3 @@
-/* .project-card {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  color: var(--color-white);
-  background-color: rgba(30, 42, 56, 0.6);
-  padding: 1rem;
-  margin: 0 1rem;
-  border-radius: 1rem;
-  max-width: 800px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.project-card:hover,
-.project-card:focus {
-  transform: translateY(-5px);
-}
-
-.project-card h2.project-title {
-  position: relative;
-  z-index: 1;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-card p.project-desc {
-  position: relative;
-  z-index: 1;
-  font-size: 1rem;
-} */
-
 .card {
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
 }

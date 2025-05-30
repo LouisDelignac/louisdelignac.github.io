@@ -1,27 +1,4 @@
-// export const projects = [ // TODO: add dates and img
-//   {
-//     title: "Défi IA - Prédiction de réachat de produits - CARREFOUR", 
-//     desc:  "Concours entre plusieurs universités en partenariat avec le groupe Carrefour. Développement d'un modèle prédictif pour le réachat à partir d’un historique d’achats et évaluation des performances du modèle avec la métrique Hit Rate @10.", 
-//     link:  'https://drive.google.com/file/d/1D_Uu9HKZ9NdYvZTOs2FqtfP2XneRH9IS/view?usp=sharing' 
-//   },
-//   { 
-//     title: "Classification d'images avec des réseaux de neurones profonds", 
-//     desc:  "Classification d'images satellite d'éoliennes à l'aide de CNN et de réseaux très profonds pré-entraînés.", 
-//     link:  'https://colab.research.google.com/drive/1nfAqg_RzaYLKZ7cQboQI9VErY02hgtmi' 
-//   },
-//   {
-//     title: "Rapport sur l'algorithme Monte Carlo Tree Search", 
-//     desc:  "Rapport d'introduction à l'algorithme Monte Carlo Tree Search (MCTS) et à ses applications dans les jeux de société. Ce rapport présente les concepts fondamentaux de MCTS, ainsi que des exemples d'implémentation.",
-//     link:  'https://drive.google.com/file/d/1AOVqC07WxfwROhG4lb8rbiwqGoQWYfcv/view?usp=sharing'
-//   },
-//   {
-//     title: "Dashboard pour l'analyse des données de l’électricité en temps réel", 
-//     desc:  "Projet de visualisation analytique CMI ISI. Ce projet consiste à créer une application Dash en python afin de visualiser les données de l'énergie électrique RTE en France Métropolitaine (hors Corse).",
-//     link:  'https://github.com/Hisqkq/Projet-de-visualisation-M1'
-//   },
-// ];
-
-export const projects = [ // TODO: add dates and img
+export const projects = [ // TODO: add dates
   {
     title: "Nvidia DLI - Getting Started with Deep Learning", 
     categorie: "Online Course",
@@ -39,9 +16,9 @@ export const projects = [ // TODO: add dates and img
     tags: ["Machine Learning", "Data Science", "Python"],
   },
   { 
-    title: "Classification d'images avec des réseaux de neurones profonds", 
+    title: "Image classification with deep neural networks", 
     categorie: "University Project",
-    description: "Classification d'images satellite d'éoliennes à l'aide de CNN et de réseaux très profonds pré-entraînés.", 
+    description: "Classification of satellite images of wind turbines using CNNs and pre-trained very deep networks.", 
     link:  'https://colab.research.google.com/drive/1nfAqg_RzaYLKZ7cQboQI9VErY02hgtmi',
     image: 'images/wind_turbine.jpg',
     tags: ["Deep Learning", "Computer Vision", "PyTorch", "Python"],
