@@ -7,6 +7,9 @@
 }
 /* background-color: #23867b; */
 /* TODO: #222831 #393E46 #948979 #DFD0B8 */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Hero section */
 .social-icons a {

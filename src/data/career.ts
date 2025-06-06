@@ -1,0 +1,154 @@
+const internship = {
+  name: "Internship",
+  content: [
+    {
+      title: "STMS",
+      date: "March 2025 - August 2025",
+      description: [
+        "STMS is a company specializing in the integration of SAP solutions. My internship focused on the development of tools and the adoption of artificial intelligence within the company.",
+        "My tasks included:",
+        "- Drafting of the Internal AI Usage Charter.",
+        "- Setting up a RAG for the company's internal chatbot.",
+        "- Organization of Training for Chatbot Usage."
+      ]
+    }
+  ]
+};
+
+const academicBackground = {
+  name: "Academic background",
+  content: [
+    {
+      title: "Introduction",
+      description: [
+        "I completed an intensive bi-disciplinary program at the University of Bordeaux to become a Data Scientist."
+      ]
+    },
+    {
+      title: "Licence CMI Ingénierie de la Statistique et Informatique - Université de Bordeaux",
+      date: "2020 - 2023",
+      description: [
+        "Bi-disciplinary training in Mathematics (Probability and Statistics) and Computer Science (Programming and Data Management) to provide the necessary tools for a Master's in Data Science."
+      ]
+    },
+    {
+      title: "Master Modélisation Statistique et Stochastique - Université de Bordeaux",
+      date: "2023 - 2025",
+      description: [
+        "Master’s in Data Science: Probability and Statistics, Optimization, Regression Models, Machine Learning (supervised, unsupervised, deep learning), Data Visualization, Databases, Survival Analysis, Optimal Transport."
+      ]
+    }
+  ]
+};
+
+const associative = {
+  name: "Associative",
+  content: [
+    {
+      title: "Introduction",
+      description: [
+        "Getting involved in community and volunteer work means choosing to dedicate time, energy, and ideas to causes greater than ourselves. It’s a school of life, a space where we learn to collaborate, lead projects, listen, and take action.",
+        "Association work fosters essential skills: teamwork, responsibility, budget or event management, and communication with diverse audiences. But beyond these technical abilities, it cultivates key interpersonal qualities: solidarity, empathy, commitment, and respect for others.",
+        "Associative engagement also plays a vital role in society. It builds connections, addresses often overlooked needs, and brings democracy to life on a daily basis. It allows everyone to get involved, feel useful, and contribute to real change—even on a small scale.",
+        "Valuing volunteer and association work means acknowledging that it’s not just “free time,” but a true driver of learning, transformation, and social progress. It’s a source of wealth—both individual and collective—that we must keep alive."
+      ]
+    },
+    {
+      title: "Échiquier Albert le Grand (Chess Club)",
+      date: "January 2020 - Today",
+      description: [
+        "Arbitre et joueur FIDE."
+      ]
+    },
+    {
+      title: "Label[i]",
+      date: "September 2021 - October 2022",
+      description: [
+        "Label[i] is the student association of the Computer Science department at the University of Bordeaux. It organizes educational and community-building events.",
+        "I was elected president in a post-COVID context, with the objective of revitalizing the association, increasing its visibility among students, and organizing the annual event “La Nuit de l’Info.”",
+        "Key achievements during my mandate included:",
+        "- Recruiting and managing a team, with clear distribution of responsibilities.",
+        "- Establishing a student lounge to promote the association on campus.",
+        "- Organizing various social events, such as a welcome party and game night.",
+        "- Creating stands at university association fairs to attract new members.",
+        "- Joining the local student association network to foster collaboration.",
+        "- Coordinating the “Nuit de l’Info” event, which gathered over 300 participants.",
+        "By the end of my term, the association had grown to over 100 active members."
+      ],
+      projects: [
+        {
+          title: "Nuit de l'Info",
+          description: [
+            "La Nuit de l'Info is a national competition that brings together students, faculty, and companies to collaborate on the development of a web application. The event takes place annually on the first Thursday of December, running from sunset to sunrise the following morning. Participants have just one night to propose, implement, and package a Web 2.0 application.",
+            "Each year, the student associations Label[i], ABEII, and AMBB, with the support of the Computer Science Department (UF Informatique) and the Computer Science Institute (IUT Informatique), take over the university’s computer science building to host the 300+ local participants in Bordeaux.",
+            "Students can visit booths from partner companies offering activities and job-dating sessions, and enjoy various animations throughout the night. Volunteers ensure that participants have everything they need to make the most of the competition."
+          ]
+        }
+      ]
+    },
+    {
+      title: "Mayday Festival",
+      date: "September 2023 - August 2024",
+      description: [
+        "The Mayday Festival is a purpose-driven music festival, organized entirely by student volunteers. Its core values center around ecological and social transitions, inclusivity, and community sharing. Mayday is more than just a festival: it’s a vibrant social space where kindness, self-expression, empowerment, and inclusivity come together.",
+        "For its 6th edition, the festival was held over two days for the first time, with the ambition of making culture accessible to all, promoting socio-environmental transition initiatives, and strengthening its local roots.",
+        "Key figures:",
+        "- Total budget: €150,000",
+        "- Over 15,000 attendees across two days",
+        "- 14 performing artists",
+        "- More than 80 partners including associations, businesses, local authorities, and universities",
+        "Awards and recognition:",
+        "- 1st Prize - ActionS 2024, awarded by the CROUS network (CNOUS)",
+        "- “Coup de cœur” Award - Cultiver l'Équité, by Génération Équitable",
+        "- SEES Food Trophy, awarded by RESES",
+        "- Ecofest Certification"
+      ],
+      images: [
+        {
+          link: "images/career/associative/mayday/Billx.jpg",
+          label: "Artiste Billx © Lombard Visuals"
+        },
+        {
+          link: "images/career/associative/mayday/Brief bénévoles.jpg",
+          label: "Brief bénévoles © Lombard Visuals"
+        },
+        {
+          link: "images/career/associative/mayday/Do Not Do.jpg",
+          label: "Artiste Do Not Do © Lombard Visuals"
+        },
+        {
+          link: "images/career/associative/mayday/Foule.jpg",
+          label: "Foule du 18 mai © Lombard Visuals"
+        },
+        {
+          link: "images/career/associative/mayday/Friperie solidaire.jpg",
+          label: "Friperie solidaire © Lombard Visuals"
+        },
+        {
+          link: "images/career/associative/mayday/Table ronde.jpg",
+          label: "Table ronde © Lombard Visuals"
+        },
+        {
+          link: "images/career/associative/mayday/visite officielle.jpg",
+          label: "Visite officielle du Maire de Talence et de la présidence de l'Université de Bordeaux © Sacha Duperret"
+        }
+      ]
+    },
+    {
+      title: "Volunteer at Various Festivals",
+      date: "September 2023 - Today",
+      description: [
+        "Campulsations",
+        "FreeMusic",
+        "Isulia",
+        "OceanFest"
+      ]
+    }
+  ]
+};
+
+export const career = {
+  internship,
+  academicBackground,
+  associative
+};

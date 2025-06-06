@@ -1,13 +1,7 @@
 import React from 'react';
 import { Anchor, Box, Container, Group, SimpleGrid, Title, Text } from '@mantine/core';
-import Dots from './components/Dots';
-import { socialLinks } from './data/socialLinks';
-import { projects } from './data/projects';
-import { PAGE_TEXTS } from "./data/texts";
-import ProjectCard from './components/ProjectCard';
-import Footer from './components/Footer';
-import CareerCard from './components/CareerCard';
-import NavButton from './components/NavButton';
+import { Dots, ProjectCard, Footer, CareerCard, NavButton } from './components';
+import { socialLinks, projects, PAGE_TEXTS } from './data';
 import './App.css';
 
 function App() {
@@ -36,13 +30,15 @@ function App() {
         <Group className="nav-list" justify="center" mt="xl" pb="lg" gap="xl">
           <NavButton href="#projects"               label="Projects" />
           <NavButton href="#about-me"               label="About Me" />
-          <NavButton href="./CV_Louis_Delignac.pdf" label="Resume"   />
+          <NavButton href="./CV_Louis_Delignac.pdf" label="Resume"   target="_blank"/>
         </Group>
-
-        <Dots style={{ left: 0,  top: 0   }} />
-        <Dots style={{ left: 60, top: 0   }} />
-        <Dots style={{ left: 0,  top: 140 }} />
-        <Dots style={{ right: 0, top: 60  }} />
+        
+        <Box visibleFrom='md'>
+          <Dots style={{ left: 0,  top: 0   }} />
+          <Dots style={{ left: 60, top: 0   }} />
+          <Dots style={{ left: 0,  top: 140 }} />
+          <Dots style={{ right: 0, top: 60  }} />
+        </Box>
       </Box>
 
       <Box component="main">

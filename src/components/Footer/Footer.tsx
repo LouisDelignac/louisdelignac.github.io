@@ -6,7 +6,7 @@ function Footer() {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Text ta="center" c="dimmed" size="sm">
-            © 2024 Louis Delignac
+            © 2025 Louis Delignac
         </Text>
       </Container>
     </div>
