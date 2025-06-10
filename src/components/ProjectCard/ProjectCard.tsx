@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { Anchor, Badge, Button, Card, Group, Image, Modal, Stack, Text } from '@mantine/core';
 import classes from './ProjectCard.module.css';
 
@@ -14,10 +14,11 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description, link, image, tags }) => {
   const [opened, { open, close }] = useDisclosure(false);
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
   <>
-    <Modal opened={opened} onClose={close} title={title} size="70%">
+    <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
       <Text>{description}</Text>
       <Anchor href={link} target="_blank" rel="noopener noreferrer">
         View Project

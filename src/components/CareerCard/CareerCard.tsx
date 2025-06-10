@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { Card, Image, Modal, Overlay, Text, Title, SimpleGrid, UnstyledButton } from '@mantine/core';
 import classes from './CareerCard.module.css';
 import career from '../../data/career.json';
@@ -25,6 +25,7 @@ interface Career {
 
 const CareerCard: React.FC<CareerCardProps> = ({ title, image }) => {
   const [opened, { open, close }] = useDisclosure(false);
+  const isMobile = useMediaQuery('(max-width: 768px)');
   const content: Career[] = career.carrers.find((item) => item.name === title)?.content || [];
   const titleContent = content.map((item, index) => (
     <Card key={index} withBorder shadow="xs" p="md" mb="md">
@@ -61,7 +62,13 @@ const CareerCard: React.FC<CareerCardProps> = ({ title, image }) => {
 
   return (
     <>
-      <Modal opened={opened} onClose={close} title={title} size="70%">
+      <Modal 
+        opened={opened} 
+        onClose={close} 
+        title={title} 
+        size="70%" 
+        fullScreen={isMobile}
+      >
         {titleContent}
       </Modal>
 
