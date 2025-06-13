@@ -5,7 +5,6 @@
   background-position: center;
   color: var(--mantine-color-white);
   border-radius: var(--mantine-radius-lg);
-  padding: var(--mantine-spacing-xl);
   overflow: hidden;
   transition: background-size 300ms ease;
 

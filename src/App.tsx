@@ -1,8 +1,10 @@
 import React from 'react';
 import { Anchor, Box, Container, Group, SimpleGrid, Title, Text } from '@mantine/core';
-import { Dots, ProjectCard, Footer, CareerCard, NavButton } from './components';
+import { Dots, ProjectCard, CareerCard, MarkdownMantine, NavButton, Footer } from './components';
 import { socialLinks, projects, PAGE_TEXTS } from './data';
 import './App.css';
+
+import { MarkdownViewer } from './utils';
 
 function App() {
   const socialIcons = socialLinks.map(({ href, icon, label }) => (
@@ -13,6 +15,13 @@ function App() {
   const ProjectCards = projects.map((proj) => (
     <ProjectCard key={proj.title} {...proj} />
   ))
+
+  const internshipsMd = MarkdownViewer('content/career/internships.md') 
+  const internshipsJSX = <MarkdownMantine markdown={internshipsMd} />;
+  const academicBackgroundMd = MarkdownViewer('content/career/academic_background.md') 
+  const academicBackgroundJSX = <MarkdownMantine markdown={academicBackgroundMd} />;
+  const associativeMd = MarkdownViewer('content/career/associative.md') 
+  const associativeJSX = <MarkdownMantine markdown={associativeMd} />;
 
   return (
     <div className="App">
@@ -62,9 +71,9 @@ function App() {
               {PAGE_TEXTS.presentation}
             </Text>
             <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl" pb="xl">
-              <CareerCard title="Internship"          image="/images/stms2.png"  />
-              <CareerCard title="Academic background" image="/images/ub.png"     />
-              <CareerCard title="Associative"         image="/images/mayday.jpg" />
+              <CareerCard title="Internships"         image="/images/stms2.png"  content={internshipsJSX}        />
+              <CareerCard title="Academic background" image="/images/ub.png"     content={academicBackgroundJSX} />
+              <CareerCard title="Associative"         image="/images/mayday.jpg" content={associativeJSX}        />
             </SimpleGrid>
           </Container>
         </Box>
