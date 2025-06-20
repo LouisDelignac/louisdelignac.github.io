@@ -1,52 +1,50 @@
 import React from 'react';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { Anchor, Badge, Button, Card, Group, Image, Modal, Stack, Text } from '@mantine/core';
-import classes from './ProjectCard.module.css';
+import { Badge, Button, Card, Group, Image, Modal, Stack, Text } from '@mantine/core';
+import { MarkdownMantine } from '../MarkdownMantine';
+import { MarkdownViewer } from '../../utils';
 
 interface ProjectCardProps {
   title: string;
   categorie: string;
   description: string;
-  link: string;
   image: string;
   tags: string[];
+  markdown: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description, link, image, tags }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description, image, tags, markdown }) => {
   const [opened, { open, close }] = useDisclosure(false);
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
   <>
     <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
-      <Text>{description}</Text>
-      <Anchor href={link} target="_blank" rel="noopener noreferrer">
-        View Project
-      </Anchor>
+      <MarkdownMantine markdown={MarkdownViewer(markdown)} imgMaxHeight='500'/>
     </Modal>
 
-    <Card shadow="sm" radius="md" p="md" className={classes.card}>
+    <Card shadow="sm" radius="md" p="md">
         <Card.Section>
-          <Image src={image} alt={title} height={180} />
+          <Image src={image} alt={title} height={180} fit="contain" />
         </Card.Section>
 
-        <Card.Section className={classes.section} mt="md" mb="xl">
+        <Card.Section mt="md" mb="xl" pl="md" pr="md">
           <Text fz="lg" fw={500}>
             {title}
             <Badge size="sm" variant="light" ml="xs">
               {categorie}
             </Badge>
           </Text>
-          <Text fz="sm" mt="xs" c="dimmed">
+          <Text ta="justify" fz="sm" mt="xs" c="dimmed">
             {description}
           </Text>
         </Card.Section>
 
         <Stack style={{ flexGrow: 1, justifyContent: "flex-end" }}>
-          <Card.Section className={classes.section}>
+          <Card.Section pl="md" pr="md">
             <Group gap="xs" mt={5}>
               {tags.map((tag) => (
-                <Badge key={tag} variant="light" size="sm" className={classes.tag}>
+                <Badge key={tag} variant="light" size="sm">
                   {tag}
                 </Badge>
               ))}
@@ -62,9 +60,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
             >
               Show details
             </Button>
-            {/* <ActionIcon variant="default" radius="md" size={36}>
-              <IconHeart className={classes.like} stroke={1.5} />
-            </ActionIcon> */}
           </Group>
         </Stack>
       </Card>

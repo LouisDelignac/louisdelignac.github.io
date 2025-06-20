@@ -1,170 +1,189 @@
-import { JSX, useEffect, useState } from 'react';
-import { Text, Title, Image, List, ListItem, Card, Blockquote, Divider, TitleOrder, Box, SimpleGrid } from '@mantine/core';
-import { marked } from 'marked';
-import DOMPurify from "dompurify";
+import { Anchor, Blockquote, Card, Code, Divider, Image, List, ListItem, Text, Title, Box, SimpleGrid, Table } from '@mantine/core';
+import { Root, RootContent, Image as MdImage } from 'mdast';
+import { unified } from 'unified';
+import rehypeRaw from 'rehype-raw';
+import ReactMarkdown from 'react-markdown';
+import remarkParse from 'remark-parse';
+import remarkStringify from 'remark-stringify';
+import remarkGfm from 'remark-gfm';
 
 interface MarkdownMantineProps {
   markdown: string;
+  imgMaxHeight?: string;
 }
 
-interface Token {
-  type: string;
-  text?: string;
-  depth?: TitleOrder;
-  href?: string;
-  title?: string;
-  tokens?: Token[];
-  items?: { text: string }[];
-  raw?: string;
-}
+function splitMarkdownIntoSections(markdown: string): RootContent[][] {
+  const tree = unified().use(remarkParse).parse(markdown) as Root;
+  const sections: RootContent[][] = [];
+  let currentSection: RootContent[] = [];
 
-function groupSections(tokens: Token[]) {
-  const sections: Token[][] = [];
-  let currentSection: Token[] = [];
-
-  for (const token of tokens) {
-    if (token.type === 'heading' && token.depth === 3) {
+  for (const node of tree.children) {
+    if (node.type === 'heading' && node.depth === 3) {
       if (currentSection.length > 0) sections.push(currentSection);
-      currentSection = [token];
+      currentSection = [node];
     } else {
-      currentSection.push(token);
+      currentSection.push(node);
     }
   }
-  if (currentSection.length > 0) sections.push(currentSection);
 
+  if (currentSection.length > 0) sections.push(currentSection);
   return sections;
 }
 
-async function renderParagraphs(text: string, key: number) {
-  const rawParagraphs = text.split('\n');
-  const parsedParagraphs = await Promise.all(rawParagraphs.map((p) => marked.parseInline(p)));
+function groupImageBlocks(nodes: RootContent[]): (RootContent[] | MdImage[])[] {
+  const blocks: (RootContent[] | MdImage[])[] = [];
+  let currentImageGroup: MdImage[] = [];
+  let currentContentGroup: RootContent[] = [];
 
-  const groupedElements: { type: 'image' | 'text'; items: any[] }[] = [];
-  let currentGroup: { type: 'image' | 'text'; items: any[] } | null = null;
-
-  parsedParagraphs.forEach((paragraph, i) => {
-    const isImage = paragraph.trim().startsWith('<img');
-    
-    if (isImage) {
-      const srcMatch = paragraph.match(/src="([^"]+)"/);
-      const src = srcMatch ? srcMatch[1] : '';
-      const altMatch = paragraph.match(/alt="([^"]+)"/);
-      const alt = altMatch ? altMatch[1] : '';
-      const titleMatch = paragraph.match(/title="([^"]+)"/);
-      const title = titleMatch ? titleMatch[1] : '';
-      
-      const imageElement = { src, alt, title, key: i };
-      
-      if (currentGroup?.type === 'image') {
-        currentGroup.items.push(imageElement);
-      } else {
-        if (currentGroup) groupedElements.push(currentGroup);
-        currentGroup = { type: 'image', items: [imageElement] };
-      }
-    } else {
-      const textElement = { content: paragraph, key: i };
-      
-      if (currentGroup?.type === 'text') {
-        currentGroup.items.push(textElement);
-      } else {
-        if (currentGroup) groupedElements.push(currentGroup);
-        currentGroup = { type: 'text', items: [textElement] };
-      }
+  const flushContent = () => {
+    if (currentContentGroup.length > 0) {
+      blocks.push([...currentContentGroup]);
+      currentContentGroup = [];
     }
-  });
-  
-  if (currentGroup) groupedElements.push(currentGroup);
+  };
+
+  const flushImages = () => {
+    if (currentImageGroup.length > 0) {
+      blocks.push([...currentImageGroup]);
+      currentImageGroup = [];
+    }
+  };
+
+  for (const node of nodes) {
+    if (node.type === 'paragraph' && node.children.length === 1 && node.children[0].type === 'image') {
+      flushContent();
+      currentImageGroup.push(node.children[0] as MdImage);
+    } else {
+      flushImages();
+      currentContentGroup.push(node);
+    }
+  }
+
+  flushContent();
+  flushImages();
+
+  return blocks;
+}
+
+function renderMarkdownBlock(block: RootContent[]) {
+  const markdown = unified()
+  .use(remarkStringify)
+  .stringify({
+    type: 'root',
+    children: block,
+  } as Root);
 
   return (
-    <Box key={key}>
-      {groupedElements.map((group, groupIndex) => {
-        if (group.type === 'image') {
-          return (
-            <SimpleGrid cols={{ base: 1, md: 3 }} key={groupIndex} mb="xs">
-              {group.items.map((img) => (
-                <Image fit="contain" src={img.src} alt={img.alt} title={img.title} />
-              ))}
-            </SimpleGrid>
-          );
-        } else {
-          return (
-            <div key={groupIndex}>
-              {group.items.map((text) => (
-                <Text key={text.key} size="sm" ta="justify" mb="xs">
-                  <span dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text.content) }} />
-                </Text>
-              ))}
-            </div>
-          );
-        }
-      })}
-    </Box>
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+      components={{
+        h1: ({ children }) => <Title order={1}>{children}</Title>,
+        h2: ({ children }) => <Title order={2}>{children}</Title>,
+        h3: ({ children }) => (
+          <Title order={3} ta="center">
+            {children}
+          </Title>
+        ),
+        h4: ({ children }) => <Title order={4} mt="md" mb="xs">{children}</Title>,
+        h5: ({ children }) => <Title order={5}>{children}</Title>,
+        h6: ({ children }) => (
+          <Text ta="center" size="sm" c="dimmed" mb="xs">
+            {children}
+          </Text>
+        ),
+        p: ({ children }) => (
+          <Text size="sm" ta="justify" mb="xs" pl="xs" pr="xs">
+            {children}
+          </Text>
+        ),
+        a: ({ href, children }) => (
+          <Anchor href={href} target="_blank" rel="noopener noreferrer">
+            {children}
+          </Anchor>
+        ),
+        ul: ({ children }) => (
+          <List size="sm" withPadding mb="sm">
+            {children}
+          </List>
+        ),
+        ol: ({ children }) => (
+          <List size="sm" withPadding type="ordered" mb="sm">
+            {children}
+          </List>
+        ),
+        li: ({ children }) => (
+          <ListItem>{children}</ListItem>
+        ),
+        blockquote: ({ children }) => (
+          <Blockquote mb="sm" pt="sm" pb="1">{children}</Blockquote>
+        ),
+        hr: () => <Divider my="md" />,
+        code: ({ children }) => (
+          <Code>{children}</Code>
+        ),
+        table: ({ children }) => (
+          <Table withColumnBorders mb="xs">
+            {children}
+          </Table>
+        ),
+        thead: ({ children }) => <Table.Thead bg="gray.0">{children}</Table.Thead>,
+        tbody: ({ children }) => <Table.Tbody>{children}</Table.Tbody>,
+        tr: ({ children }) => <Table.Tr>{children}</Table.Tr>,
+        th: ({ children }) => <Table.Th>{children}</Table.Th>,
+        td: ({ children }) => <Table.Td>{children}</Table.Td>,
+      }}
+    >
+      {markdown}
+    </ReactMarkdown>
   );
 }
 
-const ParagraphsRenderer = ({ text, keyId }: { text: string; keyId: number }) => {
-  const [content, setContent] = useState<JSX.Element | null>(null);
-
-  useEffect(() => {
-    renderParagraphs(text, keyId).then(setContent);
-  }, [text, keyId]);
-
-  return content;
-};
-
-function renderToken(token: Token, key: number) {
-  switch (token.type) {
-    case 'heading':
-      const ta = token.depth === 3 ? 'center' : 'left';
-      if (token.depth === 6) {
-        return (
-          <Text ta="center" size="sm" c="dimmed" mb="xs">
-            {token.text}
-          </Text>
-        )
-      }
-      return (
-        <Title key={key} order={token.depth} ta={ta}>
-          {token.text}
-        </Title>
-      );
-    case 'paragraph':
-      return (
-        <ParagraphsRenderer text={token.text || ''} keyId={key} />
-      );
-    case 'list':
-      return (
-        <List key={key} size="sm" mb="sm" withPadding>
-          {token.items?.map((item, i) => (
-            <ListItem key={i}>{item.text}</ListItem>
-          ))}
-        </List>
-      );
-    case 'blockquote':
-      return (
-        <Blockquote key={key} mb="sm">
-          {token.text}
-        </Blockquote>
-      );
-    case 'hr':
-      return <Divider key={key} my="md" />;
-    default:
-      return null;
-  }
-}
-
-function MarkdownMantine({ markdown }: MarkdownMantineProps) {
-  const tokens = marked.lexer(markdown) as Token[];
-  const sections = groupSections(tokens);
+function MarkdownMantine({ markdown, imgMaxHeight = "200" }: MarkdownMantineProps) {
+  const sections = splitMarkdownIntoSections(markdown);
 
   return (
-    <div>
-      {sections.map((section, i) => (
-        <Card key={i} withBorder shadow="xs" p="md" mb="md">
-          {section.map((token, j) => renderToken(token, j))}
-        </Card>
-      ))}
-    </div>
+    <>
+      {sections.map((section, i) => {
+        const blocks = groupImageBlocks(section);
+
+        return (
+          <Card key={i} withBorder shadow="xs" p="md" mb="md">
+            {blocks.map((block, j) => {
+              if (Array.isArray(block) && block[0]?.type === 'image') {
+                const images = block as MdImage[];
+                return (
+                  <SimpleGrid
+                    key={j}
+                    cols={{ base: 1, md: images.length >= 3 ? 3 : images.length }}
+                    mb="xs"
+                  >
+                    {images.map((img, idx) => (
+                      <Box key={idx}>
+                        <Image
+                          src={img.url}
+                          alt={img.alt || ''}
+                          title={img.title || undefined}
+                          fit="contain"
+                          style={{ maxHeight: `${imgMaxHeight}px` }}
+                        />
+                        {img.title && (
+                          <Text size="xs" ta="center" c="dimmed">
+                            {img.title}
+                          </Text>
+                        )}
+                      </Box>
+                    ))}
+                  </SimpleGrid>
+                );
+              } else {
+                return <div key={j}>{renderMarkdownBlock(block as RootContent[])}</div>;
+              }
+            })}
+          </Card>
+        );
+      })}
+    </>
   );
 }
 

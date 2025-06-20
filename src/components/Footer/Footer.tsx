@@ -1,15 +1,12 @@
-import { Container, Text } from '@mantine/core';
-import classes from './Footer.module.css';
+import { Box, Text } from '@mantine/core';
 
 function Footer() {
   return (
-    <div className={classes.footer}>
-      <Container className={classes.inner}>
-        <Text ta="center" c="dimmed" size="sm">
-            © 2025 Louis Delignac
-        </Text>
-      </Container>
-    </div>
+    <Box bg="gray.0" pt="sm" pb="sm">
+      <Text ta="center" c="dimmed" size="sm">
+          © 2025 Louis Delignac
+      </Text>
+    </Box>
   );
 }
 

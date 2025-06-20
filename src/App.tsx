@@ -2,9 +2,8 @@ import React from 'react';
 import { Anchor, Box, Container, Group, SimpleGrid, Title, Text } from '@mantine/core';
 import { Dots, ProjectCard, CareerCard, MarkdownMantine, NavButton, Footer } from './components';
 import { socialLinks, projects, PAGE_TEXTS } from './data';
-import './App.css';
-
 import { MarkdownViewer } from './utils';
+import './App.css';
 
 function App() {
   const socialIcons = socialLinks.map(({ href, icon, label }) => (
@@ -71,9 +70,9 @@ function App() {
               {PAGE_TEXTS.presentation}
             </Text>
             <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl" pb="xl">
-              <CareerCard title="Internships"         image="/images/stms2.png"  content={internshipsJSX}        />
-              <CareerCard title="Academic background" image="/images/ub.png"     content={academicBackgroundJSX} />
-              <CareerCard title="Associative"         image="/images/mayday.jpg" content={associativeJSX}        />
+              <CareerCard title="Internships"         image="/images/stms2.png"   content={internshipsJSX}        />
+              <CareerCard title="Academic background" image="/images/ub.png"      content={academicBackgroundJSX} />
+              <CareerCard title="Associative"         image="/images/mayday.webp" content={associativeJSX}        />
             </SimpleGrid>
           </Container>
         </Box>

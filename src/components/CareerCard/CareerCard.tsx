@@ -1,7 +1,6 @@
 import React, { JSX } from 'react';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { Modal, Overlay, Text, UnstyledButton } from '@mantine/core';
-import classes from './CareerCard.module.css';
 
 interface CareerCardProps {
   title: string;
@@ -12,27 +11,29 @@ interface CareerCardProps {
 const CareerCard: React.FC<CareerCardProps> = ({ title, image, content }) => {
   const [opened, { open, close }] = useDisclosure(false);
   const isMobile = useMediaQuery('(max-width: 768px)');
+  const styleButton = {
+    height: '160px',
+    position: 'relative' as const,
+    backgroundImage: `url(${image})`, 
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100%',
+    backgroundPosition: 'center',
+    borderRadius: 'var(--mantine-radius-lg)',
+    overflow: 'hidden'
+  };
 
   return (
     <>
-      <Modal 
-        opened={opened} 
-        onClose={close} 
-        title={title} 
-        size="70%" 
-        fullScreen={isMobile}
-      >
+      <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
         {content}
       </Modal>
 
-      <UnstyledButton
+      <UnstyledButton 
         onClick={open}
-        style={{ backgroundImage: `url(${image})` }}
-        className={classes.categoryCard}
-        key={title}
+        style={styleButton}
       >
         <Overlay color="#000" opacity={0.6} zIndex={1} />
-        <Text size="xl" ta="center" fw={700} className={classes.categoryLabel}>
+        <Text style={{ position: 'relative', zIndex: 2 }} size="xl" ta="center" fw={700} c="white">
           {title}
         </Text>
       </UnstyledButton>

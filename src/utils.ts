@@ -7,7 +7,7 @@ function MarkdownViewer(url: string) {
     fetch(url)
       .then((res) => res.text())
       .then(setMarkdown);
-  }, []);
+  }, [url]);
 
   return markdown;
 }
