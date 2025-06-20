@@ -1,18 +1,23 @@
 ### Introduction
+######
 
-Getting involved in community and volunteer work means choosing to dedicate time, energy, and ideas to causes greater than ourselves. It's a school of life, a space where we learn to collaborate, lead projects, listen, and take action.
+Volunteering in the nonprofit sector means making the deliberate choice to devote your time, skills, and energy to a meaningful project, in service of a cause or a community that is close to your heart.
 
-Association work fosters essential skills: teamwork, responsibility, budget or event management, and communication with diverse audiences. But beyond these technical abilities, it cultivates key interpersonal qualities: solidarity, empathy, commitment, and respect for others.
+This commitment opens the door to rich and diverse human encounters, fostering a genuine openness to the world. It's also a remarkable learning ground, where practical skills such as teamwork, taking on responsibility, project and budget management, as well as communication, are developed. Moreover, the nonprofit sector is a space for passing on fundamental values such as solidarity, respect for the environment, citizenship, and inclusion.
 
-Associative engagement also plays a vital role in society. It builds connections, addresses often overlooked needs, and brings democracy to life on a daily basis. It allows everyone to get involved, feel useful, and contribute to real change-even on a small scale. 
+Associations play an essential role in our society. Each year in France, more than 11 million people volunteer at least once, and over 20 million are members of at least one association, according to data from the National Institute for Youth and Popular Education (INJEP).
 
-Valuing volunteer and association work means acknowledging that it's not just "free time", but a true driver of learning, transformation, and social progress. It's a source of wealth, both individual and collective, that we must keep alive.
+Volunteering is another way of spending one's free time: giving rather than consuming. While it is an unpaid activity, it is a meaningful and fulfilling commitment that deeply enriches those who engage in it, humanly, socially, and sometimes even professionally.
+
+On a personal level, this commitment has profoundly transformed me. It has taught me to collaborate with people from different backgrounds, to step out of my comfort zone, to gain self-confidence and overcome my shyness. It has enabled me to feel useful, to place my actions within a broader context beyond my own personal path, and to bring meaning to what I do. Some of the encounters I've had in this setting have left a lasting impact on my life, shaped my choices, and given new meaning to my career path.
 
 
 ### Échiquier Albert le Grand (Chess Club)
 ###### January 2020 - Today
 
 Club Arbiter and FIDE Chess Player.
+
+![Logo Échiquier Albert le Grand](images/career/associative/echiquierALG/echiquier_alg.png "Logo Échiquier Albert le Grand")
 
 
 ### Label[i]
@@ -32,7 +37,7 @@ Key achievements during my mandate included:
 
 By the end of my term, the association had grown to over 100 active members.
 
-#### Nuit de l'Info
+#### Nuit de l'Info 2021
 
 La Nuit de l'Info is a national competition that brings together students, faculty, and companies to collaborate on the development of a web application. The event takes place annually on the first Thursday of December, running from sunset to sunrise the following morning. Participants have just one night to propose, implement, and package a Web 2.0 application.
 
@@ -44,29 +49,29 @@ Students can visit booths from partner companies offering activities and job-dat
 ### Mayday Festival
 ###### September 2023 - August 2024
 
-The Mayday Festival is a purpose-driven music festival, organized entirely by student volunteers. Its core values center around ecological and social transitions, inclusivity, and community sharing. Mayday is more than just a festival: it's a vibrant social space where kindness, self-expression, empowerment, and inclusivity come together.
+The **Mayday Festival** is a committed music festival, organized entirely by student volunteers. Its core values center around **ecological and social transitions, inclusivity, and sharing**. Mayday is more than just a festival: it's a vibrant social space where kindness, self-expression, empowerment, and inclusivity come together.
 
-For its 6th edition, the festival was held over two days for the first time, with the ambition of making culture accessible to all, promoting socio-environmental transition initiatives, and strengthening its local roots.
+For its **6th edition**, the festival was held over **two days** for the first time, with the ambition of making culture accessible to all, promoting socio-environmental transition initiatives, and strengthening its local roots.
 
-Key figures:
-- Total budget: €150,000
-- Over 15,000 attendees across two days
-- 14 performing artists
-- More than 80 partners including associations, businesses, local authorities, and universities
+As the **Managing Director**, my mission was to **coordinate the organization** of the festival: overseeing the project and **managing a team of 22 people**, preparing and leading internal and partner meetings, managing the budget, and writing the festival reports (moral report, activity report).
 
-Awards and recognition:
-- 1st Prize - ActionS 2024, awarded by the CROUS network (CNOUS)
-- "Coup de cœur" Award - Cultiver l'Équité, by Génération Équitable
-- SEES Food Trophy, awarded by RESES
-- Ecofest Certification
+> **Key figures:**
+> - Total budget: €150,000
+> - Over 15,000 attendees across two days
+> - 14 performing artists
+> - More than 80 partners including associations, businesses, local authorities, and universities
 
-![Billx](images/career/associative/mayday/Billx.jpg "Artiste Billx © Lombard Visuals")
-![Brief bénévoles](images/career/associative/mayday/Brief%20bénévoles.jpg "Brief bénévoles © Lombard Visuals")
-![Bénévoles](images/career/associative/mayday/Do%20Not%20Do.jpg "Artiste Do Not Do © Lombard Visuals")
-![Foule](images/career/associative/mayday/Foule.jpg "Foule du 18 mai © Lombard Visuals")
-![Friperie solidaire](images/career/associative/mayday/Friperie%20solidaire.jpg "Friperie solidaire © Lombard Visuals")
-![Table ronde](images/career/associative/mayday/Table%20ronde.jpg "Table ronde © Lombard Visuals")
-![Visite officielle](images/career/associative/mayday/visite%20officielle.jpg "Visite officielle du Maire de Talence et de la présidence de l'Université de Bordeaux © Sacha Duperret")
+> **Awards and recognition:**
+> - 1st Prize - ActionS 2024, awarded by the CROUS network (CNOUS)
+> - "Coup de cœur" Award - Cultiver l'Équité, by Génération Équitable
+> - SEES Food Trophy, awarded by RESES
+> - Ecofest Certification
+
+![Roundtable](images/career/associative/mayday/Table%20ronde.webp "Roundtable © Lombard Visuals")
+
+![Charitable thrift store](images/career/associative/mayday/Friperie%20solidaire.webp "Charitable thrift store © Lombard Visuals")
+
+![Artist Billx](images/career/associative/mayday/Billx.webp "Artist Billx © Lombard Visuals")
 
 
 ### Volunteer at Various Events
