@@ -1,11 +1,10 @@
 const img_path = 'images/projects/'; 
 const md_path  = 'content/projects/';
 
-export const projects = [ // TODO: add dates
+export const projects = [
   {
     title: "Nvidia DLI - Getting Started with Deep Learning", 
     categorie: "Online Course",
-    // dates: "May 3, 2025 - May 10, 2025",
     description: "Online course from Nvidia DLI on how deep learning works through hands-on exercises in computer vision and natural language processing.", 
     image: img_path + 'nvidia_dli.png',
     tags: ["Deep Learning", "Python", "PyTorch"],
@@ -30,7 +29,6 @@ export const projects = [ // TODO: add dates
   {
     title: "AI Challenge - Product re-purchase prediction - CARREFOUR", 
     categorie: "Competition",
-    // dates: "Sep 12, 2024 - Jan 9, 2025",
     description: "Competition between several universities in partnership with the Carrefour group. Development of a predictive model for re-purchasing based on a purchase history and evaluation of the model's performance with the Hit Rate @10 metric.", 
     image: img_path + 'carrefour.png',
     tags: ["Machine Learning", "Data Science", "Python"],
