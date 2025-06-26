@@ -70,9 +70,9 @@ function App() {
               {PAGE_TEXTS.presentation}
             </Text>
             <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl" pb="xl">
-              <CareerCard title="Internships"         image="/images/stms2.png"   content={internshipsJSX}        />
-              <CareerCard title="Academic background" image="/images/ub.png"      content={academicBackgroundJSX} />
-              <CareerCard title="Associative"         image="/images/mayday.webp" content={associativeJSX}        />
+              <CareerCard title="Internships"         image="/images/career/stms2.png"   content={internshipsJSX}        />
+              <CareerCard title="Academic background" image="/images/career/ub.png"      content={academicBackgroundJSX} />
+              <CareerCard title="Associative"         image="/images/career/mayday.webp" content={associativeJSX}        />
             </SimpleGrid>
           </Container>
         </Box>
