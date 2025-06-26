@@ -98,7 +98,7 @@ function renderMarkdownBlock(block: RootContent[]) {
           </Text>
         ),
         a: ({ href, children }) => (
-          <Anchor href={href} target="_blank" rel="noopener noreferrer">
+          <Anchor href={href} target="_blank" rel="noopener noreferrer" size="sm">
             {children}
           </Anchor>
         ),

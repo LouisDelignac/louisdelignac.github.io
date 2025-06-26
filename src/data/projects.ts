@@ -22,8 +22,8 @@ export const projects = [ // TODO: add dates
   {
     title: "MetroData Datathon - Bordeaux Métropole",
     categorie: "Competition",
-    description: "Datathon organized by Bordeaux Métropole in partnership with the University of Bordeaux. The objective is to analyze and visualize open-data from the metropole of Bordeaux to improve urban planning and services.",
-    image: img_path + 'BM.webp',
+    description: "Datathon organized by Bordeaux Métropole in partnership with the University of Bordeaux. The objective is to analyze and visualize open-data from the metropole of Bordeaux to create indicators of economic transitions.",
+    image: img_path + 'metrodata/BM.webp',
     tags: ["Data Analysis", "Data Visualization", "Python"],
     markdown: md_path + 'datathonBM.md',
   },
