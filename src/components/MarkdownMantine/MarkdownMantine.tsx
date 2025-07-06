@@ -9,7 +9,6 @@ import remarkGfm from 'remark-gfm';
 
 interface MarkdownMantineProps {
   markdown: string;
-  imgMaxHeight?: string;
 }
 
 function splitMarkdownIntoSections(markdown: string): RootContent[][] {
@@ -139,7 +138,7 @@ function renderMarkdownBlock(block: RootContent[]) {
   );
 }
 
-function MarkdownMantine({ markdown, imgMaxHeight = "200" }: MarkdownMantineProps) {
+function MarkdownMantine({ markdown }: MarkdownMantineProps) {
   const sections = splitMarkdownIntoSections(markdown);
 
   return (
@@ -159,20 +158,20 @@ function MarkdownMantine({ markdown, imgMaxHeight = "200" }: MarkdownMantineProp
                     mb="xs"
                   >
                     {images.map((img, idx) => (
-                      <Box key={idx}>
+                        <Box key={idx}>
                         <Image
                           src={img.url}
                           alt={img.alt || ''}
                           title={img.title || undefined}
                           fit="contain"
-                          style={{ maxHeight: `${imgMaxHeight}px` }}
+                          style={{ maxHeight: `${images.length === 1 ? 400 : images.length === 2 ? 300 : 200}px` }}
                         />
                         {img.title && (
                           <Text size="xs" ta="center" c="dimmed">
-                            {img.title}
+                          {img.title}
                           </Text>
                         )}
-                      </Box>
+                        </Box>
                     ))}
                   </SimpleGrid>
                 );

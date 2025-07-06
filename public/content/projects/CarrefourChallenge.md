@@ -16,7 +16,7 @@ To achieve this goal, we adopted a supervised learning approach, with a particul
 
 This report outlines the key steps of our work: data preparation, model selection, hyperparameter tuning, and result evaluation.
 
-[**View Jupyter Notebook**](https://colab.research.google.com/drive/17aUcZ25MyDEdB1FjVougNH7AkGmG9pYv#scrollTo=jn5IX_L8JPyw)
+[**View Notebook**](https://colab.research.google.com/drive/17aUcZ25MyDEdB1FjVougNH7AkGmG9pYv#scrollTo=jn5IX_L8JPyw)
 
 
 ### Methodology

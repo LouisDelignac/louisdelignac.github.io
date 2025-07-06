@@ -20,10 +20,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
   return (
   <>
     <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
-      <MarkdownMantine markdown={MarkdownViewer(markdown)} imgMaxHeight='500'/>
+      <MarkdownMantine markdown={MarkdownViewer(markdown)} />
     </Modal>
 
-    <Card shadow="sm" radius="md" p="md">
+    <Card withBorder shadow="sm" radius="md" p="md">
         <Card.Section>
           <Image src={image} alt={title} height={180} fit="contain" />
         </Card.Section>

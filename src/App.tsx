@@ -1,4 +1,3 @@
-import React from 'react';
 import { Anchor, Box, Container, Group, SimpleGrid, Title, Text } from '@mantine/core';
 import { Dots, ProjectCard, CareerCard, MarkdownMantine, NavButton, Footer } from './components';
 import { socialLinks, projects, PAGE_TEXTS } from './data';
