@@ -1,4 +1,6 @@
 import { Anchor, Box, Container, Group, SimpleGrid, Title, Text } from '@mantine/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { Dots, ProjectCard, CareerCard, MarkdownMantine, NavButton, Footer } from './components';
 import { socialLinks, projects, PAGE_TEXTS } from './data';
 import { MarkdownViewer } from './utils';
@@ -7,7 +9,7 @@ import './App.css';
 function App() {
   const socialIcons = socialLinks.map(({ href, icon, label }) => (
     <Anchor key={label} href={href} target="_blank" rel="noreferrer" ml="xs" mr="xs">
-      <i className={icon} aria-hidden="true" />
+      <FontAwesomeIcon icon={icon} />
     </Anchor>
   ));
   const ProjectCards = projects.map((proj) => (
