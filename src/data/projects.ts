@@ -10,14 +10,6 @@ export const projects = [
     tags: ["Deep Learning", "Python", "PyTorch"],
     markdown: md_path + 'NvidiaDeepLearning.md',
   },
-  // {
-  //   title: "Barcelona Open Data Dashboard",
-  //   categorie: "University Project",
-  //   description: "Dashboard on quality of life in Barcelona, using several indicators such as mobility and transport, environment, urban planning and housing, demographics and safety.",
-  //   image: img_path + 'opendatabcn.png',
-  //   tags: ["Data Visualization", "Dash", "Python"],
-  //   markdown: md_path + 'BCNdashboard.md',
-  // },
   {
     title: "MetroData Datathon - Bordeaux Métropole",
     categorie: "Competition",

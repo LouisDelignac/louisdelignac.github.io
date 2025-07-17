@@ -40,6 +40,10 @@ The "Small" dataset was intended for prototyping our models before training on t
 
 ![Example of other image](images\projects\windTurbinesClassification\other.jpg 'Example of other image')
 
+> **Note:**
+>
+> I've since found the full original dataset: [here](https://www.kaggle.com/datasets/airbusgeo/airbus-wind-turbines-patches).
+
 
 ### Logistic Regression
 ######

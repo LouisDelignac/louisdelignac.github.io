@@ -30,7 +30,7 @@ function App() {
           Louis Delignac
         </Title>
         <Text fz="1.25rem" ta="center" mb="md">
-          Data Science & ML Student
+          Data Scientist & ML/DL Engineer
         </Text>
         <Group className="social-icons" justify="center">
           {socialIcons}
@@ -45,7 +45,7 @@ function App() {
         <Box visibleFrom='md'>
           <Dots style={{ left: 0,  top: 0   }} />
           <Dots style={{ left: 60, top: 0   }} />
-          <Dots style={{ left: 0,  top: 140 }} />
+          <Dots style={{ left: 0,  top: 120 }} />
           <Dots style={{ right: 0, top: 60  }} />
         </Box>
       </Box>
