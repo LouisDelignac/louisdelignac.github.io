@@ -5,6 +5,6 @@ export const socialLinks = [
   { href: 'mailto:delignac.louis@gmail.com', icon: faEnvelope, label: 'Email' },
   { href: 'https://www.linkedin.com/in/louis-delignac/', icon: faLinkedin, label: 'LinkedIn' },
   { href: 'https://github.com/LouisDelignac', icon: faGithub, label: 'GitHub' },
-  { href: 'https://huggingface.co/LouisDelignac', icon: faFaceSmile, label: 'Hugging Face' },
   { href: 'https://www.kaggle.com/louisdelignac', icon: faKaggle, label: 'Kaggle' },
+  { href: 'https://huggingface.co/LouisDelignac', icon: faFaceSmile, label: 'Hugging Face' },
 ];
