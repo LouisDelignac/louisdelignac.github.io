@@ -3,6 +3,14 @@ const md_path  = 'content/projects/';
 
 export const projects = [
   {
+    title: "Segmentation of satellite images with U-Net", 
+    categorie: "Personal project",
+    description: "Personal project on satellite image segmentation using U-Net architecture.", 
+    image: img_path + 'unetPVpanels/inference.png',
+    tags: ["Image Segmentation", "U-Net", "PyTorch", "TensorFlow"],
+    markdown: md_path + 'unetPVpanels.md',
+  },
+  {
     title: "Nvidia DLI - Getting Started with Deep Learning", 
     categorie: "Online Course",
     description: "Online course from Nvidia DLI on how deep learning works through hands-on exercises in computer vision and natural language processing.", 
