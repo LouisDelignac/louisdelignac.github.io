@@ -1,5 +1,12 @@
-const img_path = 'images/projects/'; 
-const md_path  = 'content/projects/';
+import unetMd from '../content/projects/unetPVpanels.md?raw';
+import nvidiaMd from '../content/projects/NvidiaDeepLearning.md?raw';
+import datathonMd from '../content/projects/datathonBM.md?raw';
+import carrefourMd from '../content/projects/CarrefourChallenge.md?raw';
+import windTurbineMd from '../content/projects/windTurbinesClassification.md?raw';
+import mctsMd from '../content/projects/MCTS.md?raw';
+import dashboardMd from '../content/projects/electricityDashboard.md?raw';
+
+const img_path = '/images/projects/'; 
 
 export const projects = [
   {
@@ -8,7 +15,7 @@ export const projects = [
     description: "Personal project on satellite image segmentation using U-Net architecture.", 
     image: img_path + 'unetPVpanels/inference.png',
     tags: ["Image Segmentation", "U-Net", "PyTorch", "TensorFlow"],
-    markdown: md_path + 'unetPVpanels.md',
+    markdown: unetMd, 
   },
   {
     title: "Nvidia DLI - Getting Started with Deep Learning", 
@@ -16,7 +23,7 @@ export const projects = [
     description: "Online course from Nvidia DLI on how deep learning works through hands-on exercises in computer vision and natural language processing.", 
     image: img_path + 'nvidia_dli.png',
     tags: ["Deep Learning", "Python", "PyTorch"],
-    markdown: md_path + 'NvidiaDeepLearning.md',
+    markdown: nvidiaMd,
   },
   {
     title: "MetroData Datathon - Bordeaux Métropole",
@@ -24,15 +31,15 @@ export const projects = [
     description: "Datathon organized by Bordeaux Métropole in partnership with the University of Bordeaux. The objective is to analyze and visualize open-data from the metropole of Bordeaux to create indicators of economic transitions.",
     image: img_path + 'metrodata/BM.webp',
     tags: ["Data Analysis", "Data Visualization", "Python"],
-    markdown: md_path + 'datathonBM.md',
+    markdown: datathonMd,
   },
   {
     title: "AI Challenge - Product re-purchase prediction - CARREFOUR", 
     categorie: "Competition",
-    description: "Competition between several universities in partnership with the Carrefour group. Development of a predictive model for re-purchasing based on a purchase history and evaluation of the model's performance with the Hit Rate @10 metric.", 
+    description: "Competition in partnership with the Carrefour group. Development of a predictive model for re-purchasing for a recommender system.", 
     image: img_path + 'carrefour.png',
     tags: ["Machine Learning", "Data Science", "Python"],
-    markdown: md_path + 'CarrefourChallenge.md',
+    markdown: carrefourMd,
   },
   { 
     title: "Image classification with deep neural networks", 
@@ -40,15 +47,15 @@ export const projects = [
     description: "Classification of satellite images of wind turbines using CNNs and pre-trained very deep networks.", 
     image: img_path + 'windTurbinesClassification/wind_turbine.jpg',
     tags: ["Deep Learning", "Computer Vision", "PyTorch", "Python"],
-    markdown: md_path + 'windTurbinesClassification.md',
+    markdown: windTurbineMd,
   },
   {
     title: "Report on the Monte Carlo Tree Search algorithm", 
     categorie: "University Project",
-    description: "Introductory report on the Monte Carlo Tree Search (MCTS) algorithm and its applications in board games. This report presents the fundamental concepts of MCTS, as well as implementation examples.",
+    description: "Report on the MCTS algorithm and its applications in board games. This report presents the fundamental concepts as well as implementation examples.",
     image: img_path + 'mcts.png',
     tags: ["Algorithms", "Game Theory", "Research"],
-    markdown: md_path + 'MCTS.md',
+    markdown: mctsMd,
   },
   {
     title: "Dashboard for real-time electricity data analysis", 
@@ -56,6 +63,6 @@ export const projects = [
     description: "CMI ISI analytical visualization project. This project consists in creating a Dash application in python to visualize RTE electrical energy data for mainland France (excluding Corsica).",
     image: img_path + 'electricity_dashboard/page_accueil.png',
     tags: ["Data Visualization", "Dash", "Python", "MongoDB"],
-    markdown: md_path + 'electricityDashboard.md',
+    markdown: dashboardMd,
   },
 ];

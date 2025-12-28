@@ -2,7 +2,6 @@ import React from 'react';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { Badge, Button, Card, Group, Image, Modal, Stack, Text } from '@mantine/core';
 import { MarkdownMantine } from '../MarkdownMantine';
-import { MarkdownViewer } from '../../utils';
 
 interface ProjectCardProps {
   title: string;
@@ -20,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
   return (
   <>
     <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
-      <MarkdownMantine markdown={MarkdownViewer(markdown)} />
+      <MarkdownMantine markdown={markdown} />
     </Modal>
 
     <Card withBorder shadow="sm" radius="md" p="md">

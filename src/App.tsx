@@ -1,10 +1,13 @@
 import { Anchor, Box, Container, Group, SimpleGrid, Title, Text } from '@mantine/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Dots, ProjectCard, CareerCard, MarkdownMantine, NavButton, Footer } from './components';
+import { Dots, ProjectCard, CareerCard, NavButton, Footer } from './components';
 import { socialLinks, projects, PAGE_TEXTS } from './data';
-import { MarkdownViewer } from './utils';
 import './App.css';
+
+import internshipsMd from './content/career/internships.md?raw';
+import academicBackgroundMd from './content/career/academic_background.md?raw';
+import associativeMd from './content/career/associative.md?raw';
 
 function App() {
   const socialIcons = socialLinks.map(({ href, icon, label }) => (
@@ -15,13 +18,6 @@ function App() {
   const ProjectCards = projects.map((proj) => (
     <ProjectCard key={proj.title} {...proj} />
   ))
-
-  const internshipsMd = MarkdownViewer('content/career/internships.md') 
-  const internshipsJSX = <MarkdownMantine markdown={internshipsMd} />;
-  const academicBackgroundMd = MarkdownViewer('content/career/academic_background.md') 
-  const academicBackgroundJSX = <MarkdownMantine markdown={academicBackgroundMd} />;
-  const associativeMd = MarkdownViewer('content/career/associative.md') 
-  const associativeJSX = <MarkdownMantine markdown={associativeMd} />;
 
   return (
     <div className="App">
@@ -71,14 +67,14 @@ function App() {
               {PAGE_TEXTS.presentation}
             </Text>
             <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl" pb="xl">
-              <CareerCard title="Internships"         image="/images/career/stms2.png"   content={internshipsJSX}        />
-              <CareerCard title="Academic background" image="/images/career/ub.png"      content={academicBackgroundJSX} />
-              <CareerCard title="Associative"         image="/images/career/mayday.webp" content={associativeJSX}        />
+              <CareerCard title="Internships"         image="/images/career/stms2.png"   markdown={internshipsMd}        />
+              <CareerCard title="Academic background" image="/images/career/ub.png"      markdown={academicBackgroundMd} />
+              <CareerCard title="Associative"         image="/images/career/mayday.webp" markdown={associativeMd}        />
             </SimpleGrid>
           </Container>
         </Box>
       </Box>
-
+      
       <Footer/>
     </div>
   );

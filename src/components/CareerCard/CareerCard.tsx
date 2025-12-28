@@ -1,14 +1,15 @@
 import React, { JSX } from 'react';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { Modal, Overlay, Text, UnstyledButton } from '@mantine/core';
+import { MarkdownMantine } from '../MarkdownMantine';
 
 interface CareerCardProps {
   title: string;
   image: string;
-  content: JSX.Element;
+  markdown: string;
 }
 
-const CareerCard: React.FC<CareerCardProps> = ({ title, image, content }) => {
+const CareerCard: React.FC<CareerCardProps> = ({ title, image, markdown }) => {
   const [opened, { open, close }] = useDisclosure(false);
   const isMobile = useMediaQuery('(max-width: 768px)');
   const styleButton = {
@@ -25,7 +26,7 @@ const CareerCard: React.FC<CareerCardProps> = ({ title, image, content }) => {
   return (
     <>
       <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
-        {content}
+        <MarkdownMantine markdown={markdown} />
       </Modal>
 
       <UnstyledButton 

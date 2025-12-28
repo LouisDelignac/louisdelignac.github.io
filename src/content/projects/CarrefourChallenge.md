@@ -1,7 +1,7 @@
 ### Introduction
 ###### Competed from September 12, 2024 to January 9, 2025
 
-This project was carried out as part of a **Kaggle competition** organized through a partnership between the University of Bordeaux and Carrefour France's Analytics Factory.
+This project was carried out as part of a **Kaggle competition** organized through a partnership between the University of Bordeaux, Carrefour France's Analytics Factory and several other universities.
 
 The main objective is to develop a predictive model capable of identifying the first purchases of anonymized customers in 2024, using historical data from two years (2022–2023) provided by Carrefour. This data is divided into three sets:
 - **Products:** Contains metadata associated with the products (categories, features).
