@@ -28,11 +28,3 @@ html {
     flex-direction: column;
   }
 }
-
-/* Main */
-#projects {
-  background-color: var(--mantine-color-gray-0);
-}
-#about-me {
-  background-color: var(--color-white);
-}

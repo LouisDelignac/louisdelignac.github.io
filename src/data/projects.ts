@@ -10,23 +10,23 @@ const img_path = '/images/projects/';
 
 export const projects = [
   {
-    title: "Segmentation of satellite images with U-Net", 
+    title: "Segmentation of aerial images with U-Net", 
     categorie: "Personal project",
-    description: "Personal project on satellite image segmentation using U-Net architecture.", 
+    description: "Two personal projects on aerial image segmentation using U-Net architecture.", 
     image: { path: img_path + "unetPVpanels/inference.png", logo: false },
     tags: ["Image Segmentation", "U-Net", "PyTorch", "TensorFlow"],
     markdown: unetMd, 
   },
   {
-    title: "Nvidia DLI - Getting Started with Deep Learning", 
-    categorie: "Online Course",
+    title: "NVIDIA course - Deep Learning", 
+    categorie: "Certification",
     description: "Online course from Nvidia DLI on how deep learning works through hands-on exercises in computer vision and natural language processing.", 
     image: { path: img_path + "nvidia_dli.png", logo: true },
     tags: ["Deep Learning", "Python", "PyTorch"],
     markdown: nvidiaMd,
   },
   {
-    title: "MetroData Datathon - Bordeaux Métropole",
+    title: "MetroData - Open-data Datathon",
     categorie: "Competition",
     description: "Datathon organized by Bordeaux Métropole. Analysis and visualization of open-data from the metropole of Bordeaux to create indicators of economic transitions.",
     image: { path: img_path + "metrodata/BM.webp", logo: true },
@@ -34,15 +34,15 @@ export const projects = [
     markdown: datathonMd,
   },
   {
-    title: "AI Challenge - Product re-purchase prediction - CARREFOUR", 
+    title: "Product re-purchase prediction for CARREFOUR", 
     categorie: "Competition",
-    description: "Competition in partnership with the Carrefour group. Development of a predictive model for re-purchasing for a recommender system.", 
+    description: "AI competition in partnership with the Carrefour group. Development of a predictive model for re-purchasing for a recommender system.", 
     image: { path: img_path + "carrefour.png", logo: true },
     tags: ["Machine Learning", "Data Science", "Python"],
     markdown: carrefourMd,
   },
   { 
-    title: "Image classification with deep neural networks", 
+    title: "Image classification with CNNs and ResNet", 
     categorie: "University Project",
     description: "Classification of satellite images of wind turbines using CNNs and pre-trained very deep networks.", 
     image: { path: img_path + "windTurbinesClassification/turbine_images.png", logo: false },

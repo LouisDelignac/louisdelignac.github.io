@@ -47,12 +47,12 @@ function App() {
       </Box>
 
       <Box component="main">
-        <Box component="section" id="projects" pb="xl">
+        <Box component="section" id="projects" pb="xl" bg="gray.0">
           <Title order={2} fz="2rem" ta="center" pt="xl" pb="md" m="md">
             My Projects
           </Title>
           <Container size="lg">
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" pb="xl">
+            <SimpleGrid cols={{ base: 1, md: 4 }} spacing="md" pb="md">
               {ProjectCards}
             </SimpleGrid>        
           </Container>
@@ -67,7 +67,7 @@ function App() {
               {PAGE_TEXTS.presentation}
             </Text>
             <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl" pb="xl">
-              <CareerCard title="Internships"         image="/images/career/stms2.png"   markdown={internshipsMd}        />
+              <CareerCard title="Professional experiences"         image="/images/career/stms2.png"   markdown={internshipsMd}        />
               <CareerCard title="Academic background" image="/images/career/ub.png"      markdown={academicBackgroundMd} />
               <CareerCard title="Associative"         image="/images/career/mayday.webp" markdown={associativeMd}        />
             </SimpleGrid>

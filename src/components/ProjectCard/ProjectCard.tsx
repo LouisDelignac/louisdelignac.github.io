@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
           <Image
             src={image.path}
             alt={title}
-            height={180}
+            height={140}
             fit={image.logo ? 'contain' : 'cover'}
             mx={image.logo ? 'md' : 0}
             style={{ borderBottom: '1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))'}}
@@ -41,13 +41,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
         </Center>
         </Card.Section> 
 
-        <Card.Section mt="md" mb="xl" pl="md" pr="md">
-          <Text fz="lg" fw={500}>
+        <Card.Section mt="md" mb="xl" px="md">
+          <Text fz="lg">
             {title}
-            <Badge size="sm" variant="light" ml="xs">
-              {categorie}
-            </Badge>
           </Text>
+          <Badge size="sm" variant="light">
+            {categorie}
+          </Badge>
           <Text ta="justify" fz="sm" mt="xs" c="dimmed">
             {description}
           </Text>
@@ -57,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
           <Card.Section px="md">
             <Group gap="xs" mt={5}>
               {tags.map((tag) => (
-                <Badge key={tag} variant="light" size="sm">
+                <Badge key={tag} variant="outline" size="sm">
                   {tag}
                 </Badge>
               ))}
