@@ -41,25 +41,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
         </Center>
         </Card.Section> 
 
-        {/* <Card.Section withBorder={image.logo}> 
-          {image.logo ? (
-            <Center h={180} bg="gray.1">
-              <Image 
-                src={image.path} 
-                h={100} 
-                w="auto" 
-                fit="contain" 
-              />
-            </Center>
-          ) : (
-            <Image
-              src={image.path}
-              h={180}
-              fit="cover"
-            />
-          )}
-        </Card.Section> */}
-
         <Card.Section mt="md" mb="xl" pl="md" pr="md">
           <Text fz="lg" fw={500}>
             {title}
@@ -73,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
         </Card.Section>
 
         <Stack style={{ flexGrow: 1, justifyContent: "flex-end" }}>
-          <Card.Section pl="md" pr="md">
+          <Card.Section px="md">
             <Group gap="xs" mt={5}>
               {tags.map((tag) => (
                 <Badge key={tag} variant="light" size="sm">
