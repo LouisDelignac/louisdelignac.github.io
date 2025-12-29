@@ -15,7 +15,7 @@ In addition to these participants, a team of developers from Bordeaux Inov worke
 
 The main objective of our project was to contribute to a sustainable transition by identifying obstacles and initiating relevant actions.
 
-[**View Project**](https://gitlab.com/metrodata-bordeaux/equipe6)
+🔗 [**View Project**](https://gitlab.com/metrodata-bordeaux/equipe6)
 
 ![Teamwork](images\projects\metrodata\work.jpg "Teamwork © Morgane Preud'homme")
 

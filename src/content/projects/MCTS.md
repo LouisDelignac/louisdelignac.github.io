@@ -7,4 +7,4 @@ The fields of machine learning and operations research sometimes involve complex
 
 The aim of this study was to become familiar with **the theory of Monte Carlo Tree Search** and **to illustrate the resolution of certain problems**. In this study, we first explored the fundamental principles of Monte Carlo Tree Search, then detailed the four phases of the algorithm, and finally applied it to a concrete example before concluding with its advantages and limitations.
 
-[**View Report**](https://drive.google.com/file/d/1AOVqC07WxfwROhG4lb8rbiwqGoQWYfcv/view?usp=sharing)
+🔗 [**View Report**](https://drive.google.com/file/d/1AOVqC07WxfwROhG4lb8rbiwqGoQWYfcv/view?usp=sharing)

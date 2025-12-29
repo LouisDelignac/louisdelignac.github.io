@@ -14,7 +14,7 @@ Three models were implemented:
 
 We also performed **data preprocessing** and **hyperparameter tuning** to optimize model performance.
 
-[**View Notebook**](https://colab.research.google.com/drive/1nfAqg_RzaYLKZ7cQboQI9VErY02hgtmi)
+🔗 [**View Notebook**](https://colab.research.google.com/drive/1nfAqg_RzaYLKZ7cQboQI9VErY02hgtmi)
 
 
 ### Data

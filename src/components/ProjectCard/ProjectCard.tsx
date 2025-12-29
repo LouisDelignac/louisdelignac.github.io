@@ -1,13 +1,18 @@
 import React from 'react';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { Badge, Button, Card, Group, Image, Modal, Stack, Text } from '@mantine/core';
+import { Badge, Button, Card, Center, Group, Image, Modal, Stack, Text } from '@mantine/core';
 import { MarkdownMantine } from '../MarkdownMantine';
+
+interface CardImageProps {
+  path: string;
+  logo: boolean;
+}
 
 interface ProjectCardProps {
   title: string;
   categorie: string;
   description: string;
-  image: string;
+  image: CardImageProps;
   tags: string[];
   markdown: string;
 }
@@ -23,9 +28,37 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
     </Modal>
 
     <Card withBorder shadow="sm" radius="md" p="md">
-        <Card.Section>
-          <Image src={image} alt={title} height={180} fit="contain" />
-        </Card.Section>
+      <Card.Section>
+        <Center>
+          <Image
+            src={image.path}
+            alt={title}
+            height={180}
+            fit={image.logo ? 'contain' : 'cover'}
+            mx={image.logo ? 'md' : 0}
+            style={{ borderBottom: '1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))'}}
+          />
+        </Center>
+        </Card.Section> 
+
+        {/* <Card.Section withBorder={image.logo}> 
+          {image.logo ? (
+            <Center h={180} bg="gray.1">
+              <Image 
+                src={image.path} 
+                h={100} 
+                w="auto" 
+                fit="contain" 
+              />
+            </Center>
+          ) : (
+            <Image
+              src={image.path}
+              h={180}
+              fit="cover"
+            />
+          )}
+        </Card.Section> */}
 
         <Card.Section mt="md" mb="xl" pl="md" pr="md">
           <Text fz="lg" fw={500}>

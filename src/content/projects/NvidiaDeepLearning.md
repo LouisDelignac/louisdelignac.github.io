@@ -13,4 +13,4 @@ As part of the practical component, I completed the following deep learning proj
 
 This course reinforced the foundational knowledge I acquired during the "Introduction to Deep Learning" class in my Master's program at the University of Bordeaux. It significantly enhanced my practical skills in both computer vision and NLP through interactive, applied exercises using modern deep learning tools and architectures.
 
-[**View Certification**](https://learn.nvidia.com/certificates?id=YiMoPRssTByZhGRJWh5XwA)
+🔗 [**View Certification**](https://learn.nvidia.com/certificates?id=YiMoPRssTByZhGRJWh5XwA)

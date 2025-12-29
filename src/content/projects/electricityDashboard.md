@@ -11,7 +11,7 @@ We retrieved our data using APIs from 4 datasets available on the **ODRE Opendat
 - [Real-time regional data](https://odre.opendatasoft.com/explore/dataset/eco2mix-regional-tr)
 - [Consolidated regional data](https://odre.opendatasoft.com/explore/dataset/eco2mix-regional-cons-def)
 
-[**View Project on Github**](https://github.com/Hisqkq/Projet-de-visualisation-M1)
+🔗 [**View Project on Github**](https://github.com/Hisqkq/Projet-de-visualisation-M1)
 
 
 ### Data Overview
