@@ -14,10 +14,11 @@ const CareerCard: React.FC<CareerCardProps> = ({ title, image, markdown }) => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const styleButton = {
     height: '160px',
+    width: '100%',
     position: 'relative' as const,
     backgroundImage: `url(${image})`, 
     backgroundRepeat: 'no-repeat',
-    backgroundSize: '100%',
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
     borderRadius: 'var(--mantine-radius-lg)',
     overflow: 'hidden'
