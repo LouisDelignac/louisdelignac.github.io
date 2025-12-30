@@ -10,7 +10,7 @@ interface CareerItemProps {
 }
 
 interface CareerTimelineProps {
-  items: CareerItemProps[]; 
+  items: CareerItemProps[];
 }
 
 const CareerTimeline: React.FC<CareerTimelineProps> = ({ items }) => {
@@ -18,8 +18,12 @@ const CareerTimeline: React.FC<CareerTimelineProps> = ({ items }) => {
     <Timeline active={items.length - 1} bulletSize={24} lineWidth={2}>
       {items.map(({ title, institution, date, icon, description }, index) => (
         <Timeline.Item key={index} bullet={<FontAwesomeIcon icon={icon} size="xs" />} title={title}>
-          <Text size="sm" c="dimmed">{institution} • {date}</Text>
-          <Text size="sm" ta="justify">{description}</Text>
+          <Text size="sm" c="dimmed">
+            {institution} • {date}
+          </Text>
+          <Text size="sm" ta="justify">
+            {description}
+          </Text>
         </Timeline.Item>
       ))}
     </Timeline>

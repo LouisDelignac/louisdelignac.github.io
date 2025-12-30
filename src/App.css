@@ -1,9 +1,9 @@
 /* Palette de couleurs */
 :root {
-    --color-dark: #1e2a38;
-    --color-light: #f5f7fa;
-    --color-white: #ffffff;
-    --color-primary: #2a9d8f;
+  --color-dark: #1e2a38;
+  --color-light: #f5f7fa;
+  --color-white: #ffffff;
+  --color-primary: #2a9d8f;
 }
 /* background-color: #23867b; */
 /* TODO: #222831 #393E46 #948979 #DFD0B8 */

@@ -17,34 +17,42 @@ interface ProjectCardProps {
   markdown: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description, image, tags, markdown }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  categorie,
+  description,
+  image,
+  tags,
+  markdown,
+}) => {
   const [opened, { open, close }] = useDisclosure(false);
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
-  <>
-    <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
-      <MarkdownMantine markdown={markdown} />
-    </Modal>
+    <>
+      <Modal opened={opened} onClose={close} title={title} size="70%" fullScreen={isMobile}>
+        <MarkdownMantine markdown={markdown} />
+      </Modal>
 
-    <Card withBorder shadow="sm" radius="md" p="md">
-      <Card.Section>
-        <Center>
-          <Image
-            src={image.path}
-            alt={title}
-            height={140}
-            fit={image.logo ? 'contain' : 'cover'}
-            mx={image.logo ? 'md' : 0}
-            style={{ borderBottom: '1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))'}}
-          />
-        </Center>
-        </Card.Section> 
+      <Card withBorder shadow="sm" radius="md" p="md">
+        <Card.Section>
+          <Center>
+            <Image
+              src={image.path}
+              alt={title}
+              height={140}
+              fit={image.logo ? 'contain' : 'cover'}
+              mx={image.logo ? 'md' : 0}
+              style={{
+                borderBottom:
+                  '1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))',
+              }}
+            />
+          </Center>
+        </Card.Section>
 
         <Card.Section mt="md" mb="xl" px="md">
-          <Text fz="lg">
-            {title}
-          </Text>
+          <Text fz="lg">{title}</Text>
           <Badge size="sm" variant="light">
             {categorie}
           </Badge>
@@ -53,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
           </Text>
         </Card.Section>
 
-        <Stack style={{ flexGrow: 1, justifyContent: "flex-end" }}>
+        <Stack style={{ flexGrow: 1, justifyContent: 'flex-end' }}>
           <Card.Section px="md">
             <Group gap="xs" mt={5}>
               {tags.map((tag) => (
@@ -65,12 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categorie, description
           </Card.Section>
 
           <Group>
-            <Button
-              onClick={open}
-              radius="md"
-              fullWidth
-              style={{ flex: 1 }}
-            >
+            <Button onClick={open} radius="md" fullWidth style={{ flex: 1 }}>
               Show details
             </Button>
           </Group>

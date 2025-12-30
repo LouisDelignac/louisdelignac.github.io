@@ -1,7 +1,15 @@
 import { Anchor, Box, Container, Group, Paper, SimpleGrid, Title, Text } from '@mantine/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { CareerCard, CareerTimeline, Dots, Footer, NavButton, ProjectCard, Section } from './components';
+import {
+  CareerCard,
+  CareerTimeline,
+  Dots,
+  Footer,
+  NavButton,
+  ProjectCard,
+  Section,
+} from './components';
 import { careerData, socialLinks, projects, PAGE_TEXTS } from './data';
 import './App.css';
 
@@ -13,9 +21,7 @@ function App() {
       <FontAwesomeIcon icon={icon} />
     </Anchor>
   ));
-  const ProjectCards = projects.map((proj) => (
-    <ProjectCard key={proj.title} {...proj} />
-  ))
+  const ProjectCards = projects.map((proj) => <ProjectCard key={proj.title} {...proj} />);
 
   return (
     <div className="App">
@@ -29,36 +35,34 @@ function App() {
         <Group className="social-icons" justify="center">
           {socialIcons}
         </Group>
-        
+
         <Group className="nav-list" justify="center" mt="xl" pb="lg" gap="xl">
-          <NavButton href="#about-me"               label="About Me" />
-          <NavButton href="#projects"               label="Projects" />
-          <NavButton href="#associative"            label="Associative" />
-          <NavButton href="./CV_Louis_Delignac.pdf" label="Resume"   target="_blank"/>
+          <NavButton href="#about-me" label="About Me" />
+          <NavButton href="#projects" label="Projects" />
+          <NavButton href="#associative" label="Associative" />
+          <NavButton href="./CV_Louis_Delignac.pdf" label="Resume" target="_blank" />
         </Group>
-        
-        <Box visibleFrom='md'>
-          <Dots style={{ left: 0,  top: 0   }} />
-          <Dots style={{ left: 60, top: 0   }} />
-          <Dots style={{ left: 0,  top: 120 }} />
-          <Dots style={{ right: 0, top: 60  }} />
+
+        <Box visibleFrom="md">
+          <Dots style={{ left: 0, top: 0 }} />
+          <Dots style={{ left: 60, top: 0 }} />
+          <Dots style={{ left: 0, top: 120 }} />
+          <Dots style={{ right: 0, top: 60 }} />
         </Box>
       </Box>
 
       <Box component="main">
-        <Section id="about-me" title='About me' alternate>
+        <Section id="about-me" title="About me" alternate>
           <Container size="lg">
             <Paper mx="md" p="md" shadow="sm">
-              <Text ta="justify">
-                {PAGE_TEXTS.presentation}
-              </Text>
+              <Text ta="justify">{PAGE_TEXTS.presentation}</Text>
             </Paper>
             <Title order={3} fz="1.5rem" mt="xl" mb="md">
               Education & Experience
             </Title>
           </Container>
           <Container size="sm" ta="center">
-            <CareerTimeline items={ careerData } />
+            <CareerTimeline items={careerData} />
           </Container>
         </Section>
 
@@ -66,18 +70,22 @@ function App() {
           <Container size="lg">
             <SimpleGrid cols={{ base: 1, md: 4 }} spacing="md" pb="md">
               {ProjectCards}
-            </SimpleGrid>        
+            </SimpleGrid>
           </Container>
         </Section>
 
         <Section id="associative" title="Associative" alternate>
           <Container size="xs" ta="center">
-            <CareerCard title="My associative involvement" image="/images/career/mayday.webp" markdown={associativeMd} />
+            <CareerCard
+              title="My associative involvement"
+              image="/images/career/mayday.webp"
+              markdown={associativeMd}
+            />
           </Container>
         </Section>
       </Box>
-      
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

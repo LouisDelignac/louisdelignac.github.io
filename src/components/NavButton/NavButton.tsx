@@ -7,14 +7,8 @@ interface NavButtonProps {
   target?: string;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ href, label, target = "_self" }) => (
-  <Button
-    component="a"
-    href={href}
-    target={target}
-    size="lg"
-    radius="md"
-  >
+const NavButton: React.FC<NavButtonProps> = ({ href, label, target = '_self' }) => (
+  <Button component="a" href={href} target={target} size="lg" radius="md">
     {label}
   </Button>
 );

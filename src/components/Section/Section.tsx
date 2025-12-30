@@ -9,12 +9,7 @@ interface SectionProps extends BoxProps {
 
 const _Section = ({ children, title, alternate = false, ...others }: SectionProps) => {
   return (
-    <Box
-      component="section"
-      pb="xl"
-      bg={alternate ? 'gray.0' : 'white'}
-      {...others}
-    >
+    <Box component="section" pb="xl" bg={alternate ? 'gray.0' : 'white'} {...others}>
       <Title order={2} fz="2rem" ta="center" pt="xl" pb="md" mb="md">
         {title}
       </Title>

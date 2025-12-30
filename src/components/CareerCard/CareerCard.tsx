@@ -16,12 +16,12 @@ const CareerCard: React.FC<CareerCardProps> = ({ title, image, markdown }) => {
     height: '160px',
     width: '100%',
     position: 'relative' as const,
-    backgroundImage: `url(${image})`, 
+    backgroundImage: `url(${image})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     borderRadius: 'var(--mantine-radius-lg)',
-    overflow: 'hidden'
+    overflow: 'hidden',
   };
 
   return (
@@ -30,10 +30,7 @@ const CareerCard: React.FC<CareerCardProps> = ({ title, image, markdown }) => {
         <MarkdownMantine markdown={markdown} />
       </Modal>
 
-      <UnstyledButton 
-        onClick={open}
-        style={styleButton}
-      >
+      <UnstyledButton onClick={open} style={styleButton}>
         <Overlay color="#000" opacity={0.6} zIndex={1} />
         <Text style={{ position: 'relative', zIndex: 2 }} size="xl" ta="center" fw={700} c="white">
           {title}

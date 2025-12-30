@@ -1,4 +1,18 @@
-import { Anchor, Blockquote, Card, Code, Divider, Image, List, ListItem, Text, Title, Box, SimpleGrid, Table } from '@mantine/core';
+import {
+  Anchor,
+  Blockquote,
+  Card,
+  Code,
+  Divider,
+  Image,
+  List,
+  ListItem,
+  Text,
+  Title,
+  Box,
+  SimpleGrid,
+  Table,
+} from '@mantine/core';
 import { Root, RootContent, Image as MdImage } from 'mdast';
 import { unified } from 'unified';
 import rehypeRaw from 'rehype-raw';
@@ -49,7 +63,11 @@ function groupImageBlocks(nodes: RootContent[]): (RootContent[] | MdImage[])[] {
   };
 
   for (const node of nodes) {
-    if (node.type === 'paragraph' && node.children.length === 1 && node.children[0].type === 'image') {
+    if (
+      node.type === 'paragraph' &&
+      node.children.length === 1 &&
+      node.children[0].type === 'image'
+    ) {
       flushContent();
       currentImageGroup.push(node.children[0] as MdImage);
     } else {
@@ -66,11 +84,11 @@ function groupImageBlocks(nodes: RootContent[]): (RootContent[] | MdImage[])[] {
 
 function renderMarkdownBlock(block: RootContent[]) {
   const markdown = unified()
-  .use(remarkStringify)
-  .stringify({
-    type: 'root',
-    children: block,
-  } as Root);
+    .use(remarkStringify)
+    .stringify({
+      type: 'root',
+      children: block,
+    } as Root);
 
   return (
     <ReactMarkdown
@@ -84,7 +102,11 @@ function renderMarkdownBlock(block: RootContent[]) {
             {children}
           </Title>
         ),
-        h4: ({ children }) => <Title order={4} mt="md" mb="xs">{children}</Title>,
+        h4: ({ children }) => (
+          <Title order={4} mt="md" mb="xs">
+            {children}
+          </Title>
+        ),
         h5: ({ children }) => <Title order={5}>{children}</Title>,
         h6: ({ children }) => (
           <Text ta="center" size="sm" c="dimmed" mb="xs">
@@ -111,16 +133,14 @@ function renderMarkdownBlock(block: RootContent[]) {
             {children}
           </List>
         ),
-        li: ({ children }) => (
-          <ListItem>{children}</ListItem>
-        ),
+        li: ({ children }) => <ListItem>{children}</ListItem>,
         blockquote: ({ children }) => (
-          <Blockquote mb="sm" pt="sm" pb="1">{children}</Blockquote>
+          <Blockquote mb="sm" pt="sm" pb="1">
+            {children}
+          </Blockquote>
         ),
         hr: () => <Divider my="md" />,
-        code: ({ children }) => (
-          <Code>{children}</Code>
-        ),
+        code: ({ children }) => <Code>{children}</Code>,
         table: ({ children }) => (
           <Table withColumnBorders mb="xs">
             {children}
@@ -158,20 +178,22 @@ function MarkdownMantine({ markdown }: MarkdownMantineProps) {
                     mb="xs"
                   >
                     {images.map((img, idx) => (
-                        <Box key={idx}>
+                      <Box key={idx}>
                         <Image
                           src={img.url}
                           alt={img.alt || ''}
                           title={img.title || undefined}
                           fit="contain"
-                          style={{ maxHeight: `${images.length === 1 ? 400 : images.length === 2 ? 300 : 200}px` }}
+                          style={{
+                            maxHeight: `${images.length === 1 ? 400 : images.length === 2 ? 300 : 200}px`,
+                          }}
                         />
                         {img.title && (
                           <Text size="xs" ta="center" c="dimmed">
-                          {img.title}
+                            {img.title}
                           </Text>
                         )}
-                        </Box>
+                      </Box>
                     ))}
                   </SimpleGrid>
                 );
