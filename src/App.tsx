@@ -31,8 +31,9 @@ function App() {
         </Group>
         
         <Group className="nav-list" justify="center" mt="xl" pb="lg" gap="xl">
-          <NavButton href="#projects"               label="Projects" />
           <NavButton href="#about-me"               label="About Me" />
+          <NavButton href="#projects"               label="Projects" />
+          <NavButton href="#associative"            label="Associative" />
           <NavButton href="./CV_Louis_Delignac.pdf" label="Resume"   target="_blank"/>
         </Group>
         
@@ -45,7 +46,7 @@ function App() {
       </Box>
 
       <Box component="main">
-        <Section title='About me' alternate>
+        <Section id="about-me" title='About me' alternate>
           <Container size="lg">
             <Paper mx="md" p="md" shadow="sm">
               <Text ta="justify">
@@ -61,7 +62,7 @@ function App() {
           </Container>
         </Section>
 
-        <Section title="My Projects">
+        <Section id="projects" title="My Projects">
           <Container size="lg">
             <SimpleGrid cols={{ base: 1, md: 4 }} spacing="md" pb="md">
               {ProjectCards}
@@ -69,7 +70,7 @@ function App() {
           </Container>
         </Section>
 
-        <Section title="Associative" alternate>
+        <Section id="associative" title="Associative" alternate>
           <Container size="xs" ta="center">
             <CareerCard title="My associative involvement" image="/images/career/mayday.webp" markdown={associativeMd} />
           </Container>
