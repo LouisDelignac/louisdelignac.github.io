@@ -1,21 +1,21 @@
-import { faAward, faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faBusinessTime, faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 const careerData = [
   {
-    title: "Bachelor's degree CMI Statistical and Computer Engineering",
+    title: "Bachelor's degree in Mathematics and Computer Science",
     institution: 'University of Bordeaux',
     date: '2020 - 2023',
     icon: faGraduationCap,
     description:
-      "Bi-disciplinary training in Mathematics (Probability and Statistics) and Computer Science (Programming and Data Management) to provide the necessary tools for a Master's in Data Science.",
+      "Intensive bi-disciplinary program in Mathematics and Computer Science (216 ECTS), with a focus on statistics and data management, providing a strong foundation for a Master's in Data Science.",
   },
   {
-    title: "Master's degree Statistical and Stochastic Modeling",
+    title: "Master's degree in Statistical Modeling and Computer Science Engineering",
     institution: 'University of Bordeaux',
     date: '2023 - 2025',
     icon: faGraduationCap,
     description:
-      "Master's in Data Science: Probability and Statistics, Optimization, Regression Models, Machine Learning (supervised, unsupervised, deep learning), Data Visualization, Databases, Survival Analysis, Optimal Transport.",
+      "Master's in Data Science (132 ECTS) covering key areas such as Statistics, Optimization, Machine Learning, and Deep Learning.",
   },
   {
     title: 'Certification: NVIDIA DLI - Deep Learning',
@@ -25,8 +25,8 @@ const careerData = [
     description: '',
   },
   {
-    title: 'Consultant R&D IA',
-    institution: 'STMS',
+    title: 'AI R&D Consultant',
+    institution: 'STMS (SAP-focused IT services company)',
     date: '2025',
     icon: faBriefcase,
     description: `
@@ -36,11 +36,18 @@ const careerData = [
     `,
   },
   {
-    title: 'Certification: Deep Learning Specialization by Andrew Ng',
+    title: 'Certification: Deep Learning Specialization by Andrew Ng (~125h)',
     institution: 'DeepLearning.AI',
     date: '2025',
     icon: faAward,
     description: '',
+  },
+  {
+    title: 'Aspiring Data Scientist',
+    institution: '',
+    date: '',
+    icon: faBusinessTime,
+    description: 'Currently actively seeking a position in Data Science or Machine Learning.',
   },
 ];
 
