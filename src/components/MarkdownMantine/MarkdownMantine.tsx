@@ -114,7 +114,7 @@ function renderMarkdownBlock(block: RootContent[]) {
           </Text>
         ),
         p: ({ children }) => (
-          <Text size="sm" ta="justify" mb="xs" pl="xs" pr="xs">
+          <Text size="sm" ta="justify" mb="xs" px="xs">
             {children}
           </Text>
         ),
@@ -167,7 +167,7 @@ function MarkdownMantine({ markdown }: MarkdownMantineProps) {
         const blocks = groupImageBlocks(section);
 
         return (
-          <Card key={i} withBorder shadow="xs" p="md" mb="md">
+          <Card key={i} withBorder shadow="xs" p="md" mb="md" mx="xl">
             {blocks.map((block, j) => {
               if (Array.isArray(block) && block[0]?.type === 'image') {
                 const images = block as MdImage[];

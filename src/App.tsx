@@ -37,7 +37,7 @@ function App() {
         </Group>
 
         <Group className="nav-list" justify="center" mt="xl" pb="lg" gap="xl">
-          <NavButton href="#about-me" label="About Me" />
+          <NavButton href="#about-me" label="About me" />
           <NavButton href="#projects" label="Projects" />
           <NavButton href="#associative" label="Associative" />
           <NavButton href="./CV_Louis_Delignac.pdf" label="Resume" target="_blank" />
