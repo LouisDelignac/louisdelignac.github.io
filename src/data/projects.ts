@@ -1,3 +1,4 @@
+import dlspecializationMd from '../content/projects/DLspecialization.md?raw';
 import unetMd from '../content/projects/unetPVpanels.md?raw';
 import nvidiaMd from '../content/projects/NvidiaDeepLearning.md?raw';
 import datathonMd from '../content/projects/datathonBM.md?raw';
@@ -9,6 +10,14 @@ import dashboardMd from '../content/projects/electricityDashboard.md?raw';
 const img_path = '/images/projects/';
 
 export const projects = [
+  {
+    title: 'Deep Learning Specialization',
+    categorie: 'Certification',
+    description: 'A 125-hour Deep Learning course led by Andrew Ng on Coursera. It covers how to implement various complex architectures, apply best practices for managing Deep Learning projects, and solve real-world use cases.',
+    image: { path: img_path + 'dlai.png', logo: true },
+    tags: ['TensorFlow', 'Keras', 'NumPy'],
+    markdown: dlspecializationMd,
+  },
   {
     title: 'Segmentation of aerial images with U-Net',
     categorie: 'Personal project',
