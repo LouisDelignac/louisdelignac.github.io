@@ -38,7 +38,7 @@ const careerData = [
   {
     title: 'Certification: Deep Learning Specialization by Andrew Ng (~125h)',
     institution: 'DeepLearning.AI',
-    date: '2025',
+    date: '2026',
     icon: faAward,
     description: '',
   },

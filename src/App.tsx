@@ -57,18 +57,18 @@ function App() {
             <Paper mx="md" p="md" shadow="sm">
               <Text ta="justify">{PAGE_TEXTS.presentation}</Text>
             </Paper>
-            <Title order={3} fz="1.5rem" mt="xl" mb="md">
+            <Title order={3} fz="1.5rem" mt="xl" mb="xl">
               Education & Experience
             </Title>
           </Container>
-          <Container size="sm" ta="center">
+          <Container size="sm" ta="center" pb="md">
             <CareerTimeline items={careerData} />
           </Container>
         </Section>
 
         <Section id="projects" title="My Projects">
-          <Container size="lg">
-            <SimpleGrid cols={{ base: 1, md: 4 }} spacing="md" pb="md">
+          <Container size="lg" pb="md">
+            <SimpleGrid cols={{ base: 1, md: 4 }} spacing="md">
               {ProjectCards}
             </SimpleGrid>
           </Container>
