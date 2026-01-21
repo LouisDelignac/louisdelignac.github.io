@@ -75,7 +75,7 @@ function App() {
         </Section>
 
         <Section id="associative" title="Associative" alternate>
-          <Container size="xs" ta="center">
+          <Container size="xs" ta="center" pb="md">
             <CareerCard
               title="My associative involvement"
               image="/images/career/mayday.webp"
